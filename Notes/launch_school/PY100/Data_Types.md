@@ -165,3 +165,8 @@ f'Blah {expression} blah.'
 - Are reusable code designed to perform an action.
 - Functions have a data type `functions`
 
+### None
+
+- Represent the absence of a value. Also represent missing, unset, unavailable data and error indication.
+- Data type: `NoneType`
+- Literal: `None`

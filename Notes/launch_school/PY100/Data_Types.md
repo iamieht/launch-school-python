@@ -254,3 +254,50 @@ print(type(my_tuple))        # <class 'tuple'>
 >>> my_dict['bird']
 KeyError: 'bird'
 ```
+
+### Sets
+
+- Represent an unordered collection of unique immutable (and hashable) objects.
+- The objects are called the members of the set.
+- Literal: {value1, value2, value3,}
+- Empty sets must be created with the set constructor.
+- There are two set types: ordinary sets (class **set**) and frozen sets (class **frozenset**)
+- Frozen sets are immutable and lack literal syntax. The function **frozenset** must be used to create one.
+- You can use almost any immutable value as a set member.The only significant requirement is that the objects must be hashable.
+- Examples:
+
+```python
+>>> d1 = {}         # Empty dict
+>>> print(type(d1))
+<class 'dict'>
+
+>>> s1 = set()      # Empty set
+>>> print(s1)
+set()
+
+# Create a set from a literal
+>>> s2 = {2, 3, 5, 7, 11, 13}
+>>> print(s2)
+{2, 3, 5, 7, 11, 13}
+
+# Create a set from a string
+>>> s3 = set("hello there!")
+{'t', 'o', 'e', 'l', ' ', 'h', '!', 'r'}
+
+>>> s5 = frozenset([1, 2, 3])
+>>> print(s5)
+frozenset({1, 2, 3})
+
+>>> s6 = frozenset((1, 2, 3))
+>>> print(s6)
+frozenset({1, 2, 3})
+
+>>> s7 = frozenset({1, 2, 3})
+>>> print(s7)
+frozenset({1, 2, 3})
+
+>>> s8 = frozenset(range(1, 4))
+>>> print(s8)
+frozenset({1, 2, 3})
+```
+

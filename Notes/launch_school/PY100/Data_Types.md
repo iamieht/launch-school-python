@@ -159,3 +159,9 @@ print("My nickname is \"Wolfy\". What's yours?")
 f'Blah {expression} blah.'
 ```
 * The characters in a text sequence are not objects.
+
+### Functions
+
+- Are reusable code designed to perform an action.
+- Functions have a data type `functions`
+

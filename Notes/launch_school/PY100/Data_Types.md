@@ -196,3 +196,27 @@ print(type(my_tuple))        # <class 'int'>
 my_tuple = (1,)
 print(type(my_tuple))        # <class 'tuple'>
 ```
+
+#### Ranges
+
+- A **range** is a sequence of integers between two endpoints.
+- Mostly used for iteration.
+- Range doesn't produce the integers before a program ask for it. This optimizes memory.
+- Examples
+
+```python
+>>> tuple(range(5))
+(0, 1, 2, 3, 4)
+
+>>> tuple(range(5, 10))
+(5, 6, 7, 8, 9)
+
+>>> list(range(1, 10, 2))
+[1, 3, 5, 7, 9]
+
+>>> list(range(0, -5, -1))
+[0, -1, -2, -3, -4]
+
+>>> my_range = range(5, 10)
+>>> my_range[3]               # 8
+```

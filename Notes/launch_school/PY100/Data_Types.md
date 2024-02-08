@@ -170,3 +170,29 @@ f'Blah {expression} blah.'
 - Represent the absence of a value. Also represent missing, unset, unavailable data and error indication.
 - Data type: `NoneType`
 - Literal: `None`
+
+### Sequences
+
+- Represent an ordered collection of objects. The objects can be access using a numeric index.
+
+#### Lists and Tuples
+
+- Both may contain any objects.
+- Lists literal: [value1, value2, value3, ...]
+- Tuples literal: (value1, value2, value3, ...)
+- Objects inside are called elements
+- The order of the elements is significant.
+- The objects can be accessed with the [0, lenofSequence -1] indexing syntax.
+- Use indexing syntax to reassign specific list elements.
+- Lists are mutables
+- Tuples are immutable
+- Python perform optimizations on Tuples: reduce storage and improve performance.
+- Something special about Tuples with one element:
+
+```python
+my_tuple = (1)
+print(type(my_tuple))        # <class 'int'>
+
+my_tuple = (1,)
+print(type(my_tuple))        # <class 'tuple'>
+```

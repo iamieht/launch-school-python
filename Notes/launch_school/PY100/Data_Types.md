@@ -220,3 +220,37 @@ print(type(my_tuple))        # <class 'tuple'>
 >>> my_range = range(5, 10)
 >>> my_range[3]               # 8
 ```
+
+### Maps
+
+- Represent an unordered collection of objects stored as key-value pairs.
+- Keys are usually represented by strings and are a unique identifier for a specific object in the map.
+- The value is the object associated with the Key.
+- Python term for Map is **dictionary (dict)**
+- Literal: **dict** {}
+- Elements are separated by commas. {key:value,...}
+- You can access objects in a dict with the [] key access syntax
+- You can use almost any immutable object as a key in a dict; it doesn't have to be a string
+- The only significant requirement for keys is that they are hashable. immutable types are almost always hashable, while mutable types are almost always non-hashable.
+- Example:
+
+```python
+>>> my_dict = {
+...     'dog': 'barks',
+...     'cat': 'meows',
+...     'pig': 'oinks',
+... }
+{'dog': 'barks', 'cat': 'meows', 'pig': 'oinks'}
+
+>>> my_dict = {
+...     'dog': 'barks',
+...     'cat': 'meows',
+...     'pig': 'oinks'
+... }
+...
+>>> my_dict['cat']
+'meows'
+
+>>> my_dict['bird']
+KeyError: 'bird'
+```

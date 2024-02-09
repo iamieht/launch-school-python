@@ -464,6 +464,32 @@ Key differences:
 
 Stand-alone expressions that are both statements and expressions:
 
+```python
 3 + 4            # Simple expression
 print('Hello')   # Function call; returns None
 my_list.sort()   # Method call; returns None
+```
+
+### Expression Evaluation
+
+- Python evaluates most expressions from left to right if all operators are the same:
+
+```python
+>>> 1 + 2 + 3 + 4 + 5
+15
+```
+
+- When the operators are different, Python evaluates the expression based on its precedence rules.
+- Not a good idea to rely on precedence rules, better to use parenthesis to tell Python explicitly how you want to evaluate the expression:
+
+```python
+print(((4 * 5) - 1) + (2 * 3))   # 25
+print((4 * ((5 - 1) + 2)) * 3)   # 72
+print(((((4 * 5) - 1) + 2) * 3)) # 63
+print(4 * (5 - (1 + (2 * 3))))   # -8
+```
+
+### Output vs. Return Values
+
+- Writing a value to the display or terminal is also called **log** 
+- In many cases, functions or expressions don't print anything but return a value(s) that gets assigned to a variable, evaluated as a condition or passed to another function.

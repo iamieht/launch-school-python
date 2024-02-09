@@ -435,3 +435,35 @@ print(my_dict)
 # }
 ```
 
+### Expressions and Statements
+
+- An **expression** combines values, variables, operators and calls to functions to produce a new object. Expressions must be evaluated to determine the expression's value. 
+- You can think of an expression as something that has a value.
+- Examples:
+	- Literals: `5`, `'Karl'`, `3.141592`, `True`, `None`
+	- Variable references: `foo` or `name` when these variables have been previously defined.
+	- Arithmetic operations: `x + y` or `a * b - 5`.
+	- Comparison operations: `'x' == 'x'` or `'x' < 'y'`.
+	- String operations: `'x' + 'y'` or `'x' * 32`.
+	- Function calls: `print('Hello')` or `len('Python')`.
+	- Any valid combination of the above that evaluates to a single object.
+- A **statement** is an instruction that tells Python to perform an action of some kind.
+- Statements do not return values.
+- Examples:
+	- Assignment: like `x = 5`. This doesn't evaluate as a value; it assigns a value to a variable.
+	- Control flow: such as `if`, `else`, `while`, `for`, and so on. These determine the flow of your program but don't evaluate as a value themselves.
+	- Function and class definitions: using `def` or `class`.
+	- Return statements: like `return x`, which tells a function to exit and return a value. `return` itself doesn't return a value; it informs the function what value it should return.
+	- Import statements: such as `import math`.
+
+Key differences:
+
+- Expressions always return a value; statements do not.
+- Expressions are often part of statements. For example, in the statement `y = x + 5`, `x + 5` is an expression.
+- Statements often represent bigger chunks of functionality like loops or conditionals; expressions deal with determining values.
+
+Stand-alone expressions that are both statements and expressions:
+
+3 + 4            # Simple expression
+print('Hello')   # Function call; returns None
+my_list.sort()   # Method call; returns None

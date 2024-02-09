@@ -66,7 +66,7 @@ print(16 // 2.3)   # 6.0
 print(-16 // 2.3)  # -7.0
 ```
 
-[[Community_Explanations#^Simones-explanation-Integer-Division | Simone's Explanation on Integer Division]]
+[[Community_Explanations#^Simones-explanation-Integer-Division |Simone's Explanation on Integer Division]]
 
 ### Exponentiation (powers)
 
@@ -316,3 +316,122 @@ print(type(b) is A)     # False (b's type is
 print(isinstance(b, B)) # True
 print(isinstance(b, A)) # True (b is instance of A and B)
 ```
+
+
+### String Representations
+
+- `str` and `repr` return a string representation of any object.
+- `str` output is intended for human readability.
+- `repr` is lower-level and returns a string that can be use to create a new instance of the object.
+
+```python
+my_str = 'abc'
+print(my_str)       # abc
+print(str(my_str))  # abc (same as print(my_str))
+print(repr(my_str)) # 'abc' (note the quotes)
+```
+
+### Collection and String Lengths
+
+- All built-in collection types (strings, sequences, maps and sets) have lengths.
+- The length of a string is the number of characters in the string
+- The length of other collections is the number of elements in the collection.
+- Function `len` determines the length:
+
+```python
+print(len('Launch School'))       # 13 (string)
+print(len(range(5, 15)))          # 10 (range)
+print(len(range(5, 15, 3)))       # 4 (range)
+print(len(['a', 'b', 'c']))       # 3 (list)
+print(len(('d', 'e', 'f', 'g')))  # 4 (tuple)
+print(len({'foo': 42, 'bar': 7})) # 2 (dict)
+print(len({'foo', 'bar', 'qux'})) # 3 (set)
+```
+
+### Indexing and Key Access
+
+- Strings, ranges, lists and tuples support indexed access to its elements.
+- Indices begin at 0 up to 1 less than the length of the string or collection.
+- Index outside the range raise an `IndexError`:
+
+```python
+my_str = "abc"                # string
+print(my_str[0])              # 'a'
+print(my_str[1])              # 'b'
+print(my_str[2])              # 'c'
+print(my_str[3])
+# IndexError: string index out of range
+
+my_range = range(5, 8)         # range
+print(my_range[0])             # 5
+print(my_range[1])             # 6
+print(my_range[2])             # 7
+print(my_range[3])
+# IndexError: range object index out of range
+
+my_list = [4, 5, 6]           # list
+print(my_list[0])             # 4
+print(my_list[1])             # 5
+print(my_list[2])             # 6
+print(my_list[3])
+# IndexError: list index out of range
+
+my_list = [4, 5, 6]           # list
+print(my_list[0])             # 4
+print(my_list[1])             # 5
+print(my_list[2])             # 6
+print(my_list[3])
+# IndexError: list index out of range
+```
+
+- Dictionaries use keys instead of indexes.
+- Using a key that doesn't exist produces an error:
+
+```python
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+print(my_dict['a'])           # 1
+print(my_dict['b'])           # 2
+print(my_dict['c'])           # 3
+print(my_dict['d'])           # KeyError: 'd'
+```
+
+#### Using [] to update Elements
+
+- Lists and Dictionaries let you use [] operator to replace collection elements.
+- You cannot use [] to create new list elements, but you can with Dictionaries.
+- Strings, ranges, tuples and frozen sets do not support using [] because they are immutable.
+- Sets are mutable but do not support indexing.
+
+```python
+my_list = [1, 2, 3, 4]
+my_list[2] = 6
+print(my_list)          # [1, 2, 6, 4]
+my_list[4] = 10
+# IndexError: list assignment index out of range
+
+my_dict = {
+    'dog': 'barks',
+    'cat': 'meows',
+    'pig': 'oinks',
+}
+
+my_dict['pig'] = 'snorts'
+print(my_dict)
+# Pretty printed for clarity
+# {
+#     'dog': 'barks',
+#     'cat': 'meows',
+#     'pig': 'snorts'
+# }
+
+my_dict['fish'] = 'glub glub'
+print(my_dict)
+# Pretty printed for clarity
+# {
+#     'dog': 'barks',
+#     'cat': 'meows',
+#     'pig': 'snorts',
+#     'fish': 'glub glub'
+# }
+```
+

@@ -10,13 +10,13 @@
 
 |Operator|Operation|
 |---|---|
-|`+`|Addition|
-|`-`|Subtraction|
-|`*`|Multiplication|
-|`/`|Division|
-|`//`|Integer division|
-|`%`|Modulo|
-|`**`|Exponentiation|
+|`+`|[[#Addition]] |
+|`-`|[[#Subtraction]] |
+|`*`|[[#Multiplication]] |
+|`/`|[[#Division]] |
+|`//`|[[#Integer division]] |
+|`%`|[[#Modulo]] |
+|`**`|[[#Exponentiation (powers)]] |
 
 ### Addition
 
@@ -66,14 +66,7 @@ print(16 // 2.3)   # 6.0
 print(-16 // 2.3)  # -7.0
 ```
 
-The `//` operator returns the largest whole number less than or equal to the floating point result.
-In case of negative numbers the result is rounded towards negative infinitive, as far away from zero as possible, so print(16 // -3)    # -6 instead of -5
-
-Simone's explanation:
-
-This is quite simple when you visualise a number line: -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6Let's start at zero. Going right means the numbers _increase,_ whilst going left means the numbers _decrease_.So, integer division indeed returns the largest whole number _less than or equal to_ (<=) the floating-point result.  
-16//3 -> 5.33333...  -> 5 (because rounding 5.33333 _down_ gives us 5 (find the floating-point result on the number line and move _left_))So... now let's consider 16//-3.  
-16//-3 -> -5.33333... -> ? (well, if we consult our number line again, our dear -5 "sits" between -6 and -5. Which of these two numbers is _less_ (i.e. to the _left_)? Well, -6. So, this means rounding -5.33333... _down_ results in -6 ![:slightly_smiling_face:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/apple-medium/1f642@2x.png))
+[[Community_Explanations#^Simones-explanation-Integer-Division | Simone's Explanation on Integer Division]]
 
 ### Exponentiation (powers)
 
@@ -250,7 +243,7 @@ print({4, 5, 6})        # {4, 5, 6}
 
 - Implicit coercion also occurs when mixing numbers of different types in an expression:
 
-|ype A|Type B|Result type|
+|Type A |Type B|Result type|
 |---|---|---|
 |int|float|float|
 |int|Decimal|Decimal|
@@ -267,3 +260,59 @@ print(False * 5000)           # 0
 ```
 
 - One last implicit coercion is the truthiness coercion. Python can use any value, regardless of type, in a conditional expression in an `if` or `while` statement.
+
+### Determining Types
+
+- `type` function determines the type of an object:
+
+```python
+print(type(1))         # <class 'int'>
+print(type(3.14))      # <class 'float'>
+print(type(True))      # <class 'bool'>
+print(type('abc'))     # <class 'str'>
+print(type([1, 2, 3])) # <class 'list'>
+print(type(None))      # <class 'NoneType'>
+
+foo = 42               # Variables work, too
+print(type(foo))       # <class 'int'>
+```
+
+- If you just want the class name, you can access the `__name__` property from the result:
+
+```python
+print(type('abc').__name__)   # str
+print(type(False).__name__)   # bool
+print(type([]).__name__)      # list
+```
+
+- you can use `type` with the `is` operator:
+
+```python
+print(type('abc') is str)     # True
+print(type('abc') is int)     # False
+print(type(False) is bool)    # True
+print(type([]) is list)       # True
+print(type([]) is set)        # False
+```
+
+- you may want to consider using the `isinstance` function, which determines whether an object is an instance of a particular type. It takes inheritance into account:
+
+```python
+print(isinstance('abc', str))    # True
+print(isinstance([], set))       # False
+
+class A:
+    pass
+
+class B(A):
+    pass
+
+b = B()
+
+print(type(b).__name__) # B
+print(type(b) is B)     # True
+print(type(b) is A)     # False (b's type is
+                        # not A)
+print(isinstance(b, B)) # True
+print(isinstance(b, A)) # True (b is instance of A and B)
+```

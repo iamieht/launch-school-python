@@ -9,4 +9,4 @@
 |1stCharacter   | illegal           | cannot start with a digit
 |operand2       | idiomatic         |
 |BIG_NUMBER     | non-idiomatic     | Names should contain lowercase letters
-|π              | non-idiomatic     | Not part of ASCII
+|π              | non-idiomatic     | v

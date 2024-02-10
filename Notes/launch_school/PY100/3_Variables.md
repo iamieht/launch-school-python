@@ -104,3 +104,42 @@ On line 3, we **reassign** the value `42` to the variable `answer`. Python makes
 |one two three|Whitespace|
 |is_lowercase?|Punctuation|
 |is+lowercase|Special character|
+
+## Creating and Reassigning Variables
+
+- We create (initialize) a variable by simply giving it a value. That happens as part of an assignment statement:
+
+```python
+forename = 'Clare'            # initialization
+```
+
+- We can also give new values to variables by simply reassigning them:
+
+```python
+forename = 'Victor'           # reassignment
+```
+
+- Way to describe an assignment: The variable `foo`is assigned the value of `bar`.
+
+### How Initialization and Reassignment Work
+
+- When you initialize a variable, Python creates its initial value and sticks it somewhere in the computer's memory. It also allocates a small amount of memory for the variable itself, then places the value's memory address into the variable's spot in memory.
+- Example:
+
+```python
+foo = 'abcdefghi'
+```
+
+Python creates the string `abcdefghi` somewhere in the memory. Next it will create a variable somewhere else in memory. Then associates the variable name with the address in memory. Then Python stores the address of the string at the address of the variable name.
+
+![[Pasted image 20240210135549.png]]
+
+Later we reassign the variable `foo`to another value:
+
+```python
+foo = 'Hello'
+```
+
+Python creates the new string `Hello` somewhere in memory. Since we already have a `foo`variable, Python replaces the value at variable's address with the new address of the value `Hello`. This breaks the connection with the original string and establishes a new one with the new string.
+
+![[Pasted image 20240210135955.png]]

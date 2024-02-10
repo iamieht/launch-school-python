@@ -143,3 +143,75 @@ foo = 'Hello'
 Python creates the new string `Hello` somewhere in memory. Since we already have a `foo`variable, Python replaces the value at variable's address with the new address of the value `Hello`. This breaks the connection with the original string and establishes a new one with the new string.
 
 ![[Pasted image 20240210135955.png]]
+
+## Creating Constants
+
+- Constants are created (initialized) in the same way as variables: by giving them a value:
+
+```python
+PINING_FOR = 'fjords'         # initialization
+```
+
+- Python does not support true constants. Instead, the **SCREAMING_SNAKE_CASE** naming convention is solely for programmers.
+
+## Expressions and Assignment
+
+- Assignment and reassignment often use expressions on the right side `=`to determine the desired value.
+- Example:
+
+```python
+def square(number):
+    return number * number
+
+forty_two_squared = square(42)
+print(forty_two_squared)                # 1764
+```
+
+- The expression on the right side of the `=` operator can be any valid expression.
+- The variable to the left of the `=` operator is always the target variable for the resulting value. That is, the expression's value will be assigned to the variable.
+- It's worth noting that the right side of an assignment is always completely evaluated before assigning the result to the variable.
+
+```python
+foo = 42            # foo is 42
+foo = foo - 2       # foo is now 40
+foo = foo * 3       # foo is now 120
+foo = foo + 5       # foo is now 125
+foo = foo // 25     # foo is now 5
+foo = foo / 2       # foo is now 2.5
+foo = foo ** 3      # foo is now 15.625
+print(foo)          # prints 15.625
+```
+
+- In lines 2-7, the right side of each assignment is computed first using whatever value `foo` had most recently. Thus, `foo` was 42 on line 2, 40 on line 3, and so on. On each line, a computation is performed using the current value of `foo`. Python then reassigns the newly computed value to `foo`.
+
+## Augmented Assignment
+
+- It's a shorthand notation also called **assignment operators**, of the process of taking the current value of a variable, perform an arithmetic operation on the variable's value, and then reassign the variable to the newly computed value.
+
+```python
+foo = 42            # foo is 42
+foo -= 2            # foo is now 40
+foo *= 3            # foo is now 120
+foo += 5            # foo is now 125
+foo //= 25          # foo is now 5
+foo /= 2            # foo is now 2.5
+foo **= 3           # foo is now 15.625
+print(foo)          # prints 15.625
+
+bar = 'xyz'          # bar is 'xyz'
+bar += 'abc'         # bar is now 'xyzabc'
+bar *= 2             # bar is now 'xyzabcxyzabc'
+print(bar)           # prints xyzabcxyzabc
+
+bar = [1, 2, 3]     # bar is [1, 2, 3]
+bar += [4, 5]       # + with lists appends
+                    # bar is now [1, 2, 3, 4, 5]
+print(bar)          # prints [1, 2, 3, 4, 5]
+
+bar = {1, 2, 3}     # bar is {1, 2, 3}
+bar |= {2, 3, 4, 5} # | performs set union
+                    # bar is now {1, 2, 3, 4, 5}
+bar -= {2, 4}       # - performs set difference
+                    # bar is now {1, 3, 5}
+print(bar)          # prints {1, 3, 5}
+```

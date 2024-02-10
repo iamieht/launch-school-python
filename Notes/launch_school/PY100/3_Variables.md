@@ -215,3 +215,32 @@ bar -= {2, 4}       # - performs set difference
                     # bar is now {1, 3, 5}
 print(bar)          # prints {1, 3, 5}
 ```
+
+## Reassignment vs. Mutation
+
+- There are two ways to change things in Python:
+	- Change the **binding** of the variable by making it reference a new object (**Reassignment**).
+	- Change the value of the object assigned (**bound**) to the variable (**Mutation**).
+- **Reassignment** makes the variable name refer to a different object somewhere else in memory.
+- **Mutation** does not change which object the variable refers to, instead it changes the object itself. After mutating an object assigned to a specific variable, the variable continues to refer to the same object (albeit altered) at the same memory location.
+- **Reassigning** an element of a mutable collection doesn't reassign the variable; it mutates the collection.
+- Examples:
+
+```python
+num = 3               # assignment (initialization)
+my_list = [1, 2, 3]   # assignment (initialization)
+my_dict = {           # assignment (initialization)
+    'a': 1,
+    'b': 2
+}
+
+num = 42              # Reassignment
+my_list[1] = 42       # Reassignment of element,
+                      # my_list is mutated!
+my_dict['b'] = 3      # Reassignment of dict pair
+                      # my_dict is mutated!
+
+# You can still reassign the variables
+my_list = (2, 3, 4)   # Reassignment
+my_dict = { 'x': 0 }  # Reassignment
+```

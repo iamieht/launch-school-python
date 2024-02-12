@@ -71,3 +71,27 @@ print(chr(61))                # =
 print(chr(126))               # ~
 ```
 
+### `any` and `all`
+
+- Both operate on iterable collections.
+- `any` returns `True` if any element in a collection is truthy.
+- `any` returns `False` if all the elements in a collection are falsy.
+- `all` returns `True` if all the elements in a collection are truthy.
+- `all` returns `False` if all elements in a collection are falsy.
+
+```python
+collection1 = [False, False, False]
+collection2 = (False, True, False)
+collection3 = {True, True, True}
+
+print(any(collection1))       # False
+print(any(collection2))       # True
+print(any(collection3))       # True
+print(any([]))                # False
+
+print(all(collection1))       # False
+print(all(collection2))       # False
+print(all(collection3))       # True
+print(all([]))                # True
+```
+- `print(all[])` returns `True` because: this is termed a "vacuous truth"... since there is nothing in the list, there are no false elements in the list, and by definition all() can only return False when the list contains at least one False ...so, since all zero elements in the list are not False, all() "has to" return True (so as not to contradict itself)

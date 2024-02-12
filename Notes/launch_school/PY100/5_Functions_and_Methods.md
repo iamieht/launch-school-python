@@ -145,3 +145,17 @@ def func_name():
     func_body
 ```
 
+- **docstring** is a documentation comment written inside a triple-quoted string at the beginning of a function's block. This documentation can be accessed with the `help()` function and the `__doc__` property.
+
+```python
+def say():
+    """
+    The say function prints "Hi!"
+    """
+    print('Hi!')
+
+print('-' * 60)
+print(say.__doc__)
+print('-' * 60)
+help(say)
+```

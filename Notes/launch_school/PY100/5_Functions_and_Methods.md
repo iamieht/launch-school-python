@@ -207,3 +207,60 @@ print(greeting)
 - When a `return` statement is used to return a specific value from a function, this is called an **explicit return value**.
 - Functions that always return a Boolean value are called **predicates**.
 
+## Default Parameters
+
+- These are default values provided to the function's parameters, so the function can be invoked without some of its arguments.
+
+```python
+def say(text='hello'):
+    print(text + '!')
+
+say('Howdy') # Howdy!
+say()        # hello!
+```
+
+- You can provide defaults for any or all of a function's parameters.
+- Once you specify a default value for an argument, all subsequent positional arguments myst also have default values:
+
+```python
+def say(msg1, msg2, msg3='dummy message', msg4):
+    pass
+# SyntaxError: non-default argument follows default argument
+```
+
+- You can't accept the default value for an argument and provide an explicit value for a subsequent argument:
+
+```python
+def say(msg1, msg2, msg3='dummy message',
+                    msg4='omittted message'):
+    print(msg1)
+    print(msg2)
+    print(msg3)
+    print(msg4)
+
+say('a', 'b', 'c', 'd')
+# a
+# b
+# c
+# d
+
+say('a', 'b', 'c')
+# a
+# b
+# c
+# omitted message
+
+say('a', 'b')
+# a
+# b
+# dummy message
+# omitted message
+
+say('a', 'b', 'd')
+# a
+# b
+# d          # oops - expecting 'dummy message'
+# omitted message   # oops again - expected 'd'
+```
+- Python has a variety of ways to specify parameters. The easiest is with positional parameters. With positional parameters, the parameter values are taken from the corresponding argument position. Thus, if you have a function that takes 3 parameters, the first parameter is set to the first argument, the second parameter to the second argument, and the third parameter to the third argument.
+

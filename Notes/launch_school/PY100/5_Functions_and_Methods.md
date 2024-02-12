@@ -264,3 +264,9 @@ say('a', 'b', 'd')
 ```
 - Python has a variety of ways to specify parameters. The easiest is with positional parameters. With positional parameters, the parameter values are taken from the corresponding argument position. Thus, if you have a function that takes 3 parameters, the first parameter is set to the first argument, the second parameter to the second argument, and the third parameter to the third argument.
 
+## Functions vs. Methods
+
+- We call a function by writing parentheses after its name. Any arguments are provided inside the parentheses.
+- **Method invocation** occur when you prepend an object followed by a period `()` to a function invocation, i.e `"str".upper()`. This function invocations are called **method calls**.
+- Methods work with specific objects. All methods are functions but not vice versa.
+- Every method belongs to a class and requires an object of that class to call it.

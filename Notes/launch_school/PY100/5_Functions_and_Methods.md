@@ -87,11 +87,43 @@ collection3 = {True, True, True}
 print(any(collection1))       # False
 print(any(collection2))       # True
 print(any(collection3))       # True
-print(any([]))                # False
+print(any([]))                # False ("Are any of the members truthy? No.")
 
 print(all(collection1))       # False
 print(all(collection2))       # False
 print(all(collection3))       # True
-print(all([]))                # True
+print(all([]))                # True ("Are all of the members truthy? Yes, because we would need sth falsy to return False.")
 ```
 - `print(all[])` returns `True` because: this is termed a "vacuous truth"... since there is nothing in the list, there are no false elements in the list, and by definition all() can only return False when the list contains at least one False ...so, since all zero elements in the list are not False, all() "has to" return True (so as not to contradict itself)
+
+## Functions for the REPL
+
+### The id Function
+
+- Returns an integer that serves as an object's **identity**. 
+- Every object has a unique identity that does not change during the object's lifetime.
+- The identity may be reused later in the program if the original object is discarded.
+- In most cases, two instances of an object with the same value will always have two distinct identities. This is not always true.
+- There is a process called **interning** use for optimization/performance in which string and integer values in memory are reused, so the id of both variables is the same:
+
+```python
+# Paste this code into the Python REPL
+# Don't run it as a program
+
+s = 'Hello, world!'
+t = 'Hello, world!'
+print(id(s) == id(t))         # False
+
+s = 'supercalifragilisticexpialidocious'
+t = 'supercalifragilisticexpialidocious'
+print(id(s) == id(t))         # True
+
+x = 5
+y = 5
+print(id(x) == id(y))         # True
+
+x = 5
+y = 6
+print(id(x) == id(y))         # False
+```
+

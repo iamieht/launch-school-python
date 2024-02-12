@@ -127,3 +127,21 @@ y = 6
 print(id(x) == id(y))         # False
 ```
 
+### The dir Function
+
+- Without arguments it returns a list of all **identifiers** in the current local scope.
+- With an argument, returns a list of the object's attributes.
+- Many of the names shown by `dir` begin and end with two underscores. These are called **dunder**(double-underscore) or **magic methods** and **magic variables**.
+- An **identifier** is a name given to variables, functions, classes, modules, attributes and other objects.
+
+### The help function
+
+- prints some basic help on how to use modules, keywords, built-in functions, classes, etc.
+
+## Creating Functions
+
+```python
+def func_name():
+    func_body
+```
+

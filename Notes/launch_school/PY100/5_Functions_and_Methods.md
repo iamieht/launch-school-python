@@ -194,6 +194,16 @@ print(greeting)
 
 - Arguments are values used when calling a function and they let you pass data from outside's function scope into the function so it can access that data.
 - Parameters are the names between parentheses in the function definition. These are placeholders for potential arguments, while arguments are the values assigned to those placeholders.
+- **Arguments** are objects passed to a function during invocation.
+- **Parameters** are placeholders for the objects that will be passed to the function when it is invoked.
 - **Function names and parameters are both considered variable names in Python**
 - **Parameters** are **local variables**: they are defined localy within the function's body.
 - A function's name is global or local, depending on whether it is at the program's top level or nested inside a class, module or another function.
+
+## Return Values
+
+- Functions return a result to the caller for later use with return values and the `return` statement.
+- All Python function calls evakluate to a value (if the function doesn't raise an exception). By default the value is `None`, this is the **implicit return value**.
+- When a `return` statement is used to return a specific value from a function, this is called an **explicit return value**.
+- Functions that always return a Boolean value are called **predicates**.
+

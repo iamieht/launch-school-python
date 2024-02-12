@@ -54,3 +54,20 @@ print(max(-10, '5', '12', '0', -20))
 
 ### `ord` and `chr`
 
+- `ord`: given a single character, returns an integer that represents the Unicode or ASCII code point of that character.
+
+```python
+print(ord('a'))               # 97
+print(ord('A'))               # 65
+print(ord('='))               # 61
+print(ord('~'))               # 126
+```
+- `chr` is the inverse of `ord`: converts an integer into the corresponding Unicode character.
+
+```python
+print(chr(97))                # a
+print(chr(65))                # A
+print(chr(61))                # =
+print(chr(126))               # ~
+```
+

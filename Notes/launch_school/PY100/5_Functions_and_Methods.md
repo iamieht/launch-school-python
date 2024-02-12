@@ -270,3 +270,14 @@ say('a', 'b', 'd')
 - **Method invocation** occur when you prepend an object followed by a period `()` to a function invocation, i.e `"str".upper()`. This function invocations are called **method calls**.
 - Methods work with specific objects. All methods are functions but not vice versa.
 - Every method belongs to a class and requires an object of that class to call it.
+
+## Mutating the Caller
+
+- **Mutates the caller** means that the object used to invoke the method mutates. 
+
+```python
+odd_numbers = [1, 3, 5, 7, 9]
+odd_numbers.pop()
+print(odd_numbers)  # [1, 3, 5, 7]
+```
+- Mutating the caller is acceptable practice; many built-in functions and methods do just that. However, you should avoid mutating arguments since such functions can be tough to debug and is considered poor practice.

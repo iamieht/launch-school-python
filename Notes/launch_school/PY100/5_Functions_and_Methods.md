@@ -165,7 +165,7 @@ help(say)
 - The **scope** of an identifier determines where you can use it.
 - Python determines scope by looking at where you initialize the identifier.
 - Identifiers have **function scope**: anything initialized inside a function is only available within the body of that function and nested functions. No code outside of the function body can access that identifier.
-- **Variable Shadowing** is when a variable declared within a certain scope hides another variable with the same name in an outer scope.
+- **Variable Shadowing** is when a variable (assigned) in an inner scope "hides" (that is, makes inaccessible) another variable with the same name in an outer scope
 
 ```python
 greeting = 'Salutations'
@@ -189,3 +189,11 @@ def well_howdy(who):
 well_howdy('Angie')
 print(greeting)
 ```
+
+## Arguments and Parameters
+
+- Arguments are values used when calling a function and they let you pass data from outside's function scope into the function so it can access that data.
+- Parameters are the names between parentheses in the function definition. These are placeholders for potential arguments, while arguments are the values assigned to those placeholders.
+- **Function names and parameters are both considered variable names in Python**
+- **Parameters** are **local variables**: they are defined localy within the function's body.
+- A function's name is global or local, depending on whether it is at the program's top level or nested inside a class, module or another function.

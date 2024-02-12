@@ -159,3 +159,33 @@ print(say.__doc__)
 print('-' * 60)
 help(say)
 ```
+
+## Scope
+
+- The **scope** of an identifier determines where you can use it.
+- Python determines scope by looking at where you initialize the identifier.
+- Identifiers have **function scope**: anything initialized inside a function is only available within the body of that function and nested functions. No code outside of the function body can access that identifier.
+- **Variable Shadowing** is when a variable declared within a certain scope hides another variable with the same name in an outer scope.
+
+```python
+greeting = 'Salutations'
+
+def well_howdy(who):
+    greeting = 'Howdy'
+    print(f'{greeting}, {who}')
+
+well_howdy('Angie')
+print(greeting)
+```
+
+- In the following example, Python looks for `greeting` in the **lexical scope**, which means that it searches all of outer scopes for the nearest definition of `greeting`.
+
+```python
+greeting = 'Salutations'
+
+def well_howdy(who):
+    print(f'{greeting}, {who}')
+
+well_howdy('Angie')
+print(greeting)
+```

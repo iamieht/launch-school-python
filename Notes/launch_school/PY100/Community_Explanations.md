@@ -9,3 +9,6 @@ Python's asterisk and slash special parameters in the documentation:
 |positional-only arguments |**`/`**|positional or keyword arguments |
 |positional or keyword arguments |**`*`**|keyword-only arguments |
 **Non-divider meaning/role**: `*args` means accepting an arbitrary numbers of *positional arguments* whereas `**kwargs` means accepting an arbitrary numbers of *keyword arguments*^Simones-python-docs
+
+
+Put another way, the example is meant to show that the str.strip() method "works from the outside in" character by character; the string argument does not represent a substring, but rather a set of characters to remove whose order does not matter. So, imagine a simpler example such as "hello".strip("ol") : we are "searching" for two characters, "o" and "l", from the outside in. The algo says "hmmm, do I see an 'o' at either end? Yes! SNIP! (....breather...) hmmm, do I see an 'l' at either end? Yes! SNIP! (etc.....)" Note that "hello".strip("lo")  would result in the same final string because now, the algo says "hmmm, do I see an 'l' at either end? No! (...walks one char further...) hmmm, do I see an 'o' at either end? Yes! SNIP!" and then restarts the process from the beginning (that is, searching for 'l') until the answer to its question is always "No!" (so Mr Algo puts his little scissors away...)^'str'.strip() 

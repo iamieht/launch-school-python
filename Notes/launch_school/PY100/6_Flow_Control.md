@@ -184,4 +184,14 @@ print('' or 0)       # last evaluated op: 0
 print(None or [])    # last evaluated op: []
 ```
 
+## Logical Operator Precedence
 
+- The following list shows the precedence of the comparison operators from highest (top) to lowest (bottom):
+
+    - `==`, `!=`, `<=`, `<`, `>`, `>=` - Comparison
+    - `not` = Logical NOT
+    - `and` - Logical AND
+    - `or` - Logical OR
+
+- Use parentheses to explicitly control evaluation order.
+- A secondary issue is that short-circuit evaluation may prevent Python from evaluating the expression to the operator's right.

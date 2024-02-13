@@ -26,7 +26,25 @@ print(letters[2])         # c (third element)
     - Strings are not actual collections since the characters inside the string aren't objects.
 
 
+## What are Sets?
 
+- Sets are types that maintain an **unordered** collection of unique objects (also called **elements** or **members**).
+- Sets cannot be indexed.
+- **Unordered** means no well-defined order exists for the objects in a set.
+- There are two types of set types: sets (mutable) and frozen sets (immutable).
+- Both are **heterogeneous**
+
+```python
+letters = {'a', 'b', 'c', 'b', 'a'}
+print(letters)
+# {'a', 'c', 'b'} (order may differ)
+
+letters.add('c')
+print(letters)
+# {'a', 'c', 'b'} (order may differ)
+```
+
+## 
 
 
 

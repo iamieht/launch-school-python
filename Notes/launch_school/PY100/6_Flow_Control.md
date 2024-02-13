@@ -59,4 +59,28 @@ print('abc' != 'aBc')     # True
 print(5 != '5')           # True
 ```
 
+### `<` and `<=`
+
+- The **less than operator** (`<`) returns `True` when the value of the left operand has a value that is less than the value on the right, `False` otherwise.
+- The **less than or equal to operator** (`<=`) is similar, but it also returns `True` when the values are equal.
+
+```python
+print(4 < 5)              # True
+print(5 < 4)              # False
+print(5 < 5)              # False
+
+print(4 <= 5)             # True
+print(5 <= 4)             # False
+print(5 <= 5)             # True
+
+print('4' < '5')          # True
+print('5' < '4')          # False
+print('5' < '5')          # False
+
+print('42' < '402')       # False
+print('42' < '420')       # True
+print('420' < '42')       # False
+```
+
+
 

@@ -195,3 +195,23 @@ print(None or [])    # last evaluated op: []
 
 - Use parentheses to explicitly control evaluation order.
 - A secondary issue is that short-circuit evaluation may prevent Python from evaluating the expression to the operator's right.
+
+## match/case Statement
+
+- The Python match statement was introduced in Python 3.10.
+- The statements in the `case _` block run when the expression doesn't match any other case blocks.
+- If you want to match multiple values in a case, you can do so by using the | character to separate item values
+
+```python
+value = 5
+
+match value:
+    case 1 | 2 | 3 | 4:
+        print('value is < 5')
+    case 5 | 6:
+        print('value is 5 or 6')
+    case _: # default case
+        print('value is not 1, 2, 3, 4, 5, or 6')
+# value is 5 or 6
+```
+

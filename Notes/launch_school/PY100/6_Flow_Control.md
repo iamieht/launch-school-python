@@ -132,4 +132,16 @@ print(not(4 != 4))        # True
 |   `False` |   `True`  |   `False`     |   `True`      |
 |   `False` |   `False` |   `False`     |   `False`     |
 
+## Short Circuits
+
+- The `and` and `or` operators use **short circuit evaluation** to evaluate their operands.
+
+```python
+is_red(item) and is_portable(item)
+is_green(item) or has_wheels(item)
+```
+
+- The first expression returns True when item is red and portable.
+- If either condition is False, then the overall result must be False.
+- If the program determines that item is not red, it doesn't have to determine whether it is also portable.Python short-circuits the rest of the expression by terminating evaluation if it determines that item isn't red. It doesn't need to call is_portable() since it already knows the expression must be False.
 

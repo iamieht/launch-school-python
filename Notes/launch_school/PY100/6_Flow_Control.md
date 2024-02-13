@@ -21,3 +21,30 @@ else:
 
 ## Comparisons
 
+- Comparison operators return a Boolean value: `True` or `False`.
+- **Operands** are the expressions to the left and right of an operator.
+
+### `==`
+
+- The **equality operator** returns `True` when the operands have equal values, `False` otherwise.
+- In most cases, operands must have the same type and value to be equals. There are some cases where you can mix types.
+
+```python
+print(5 == 5)          # True
+print(5 == 4)          # False
+
+print('abc' == 'abc')  # True
+print('abc' == 'abcd') # False
+
+print(5 == '5')        # False
+
+print([1, 2, 3] == [1, 2, 3]) # True
+print([1, 2, 3] == [3, 2, 1]) # False
+
+print(5 == float(5))                # True
+
+big_num = 12345678901234567
+print(float(big_num) == big_num)    # False
+```
+
+

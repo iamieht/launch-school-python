@@ -215,3 +215,13 @@ match value:
 # value is 5 or 6
 ```
 
+## Ternary Expressions
+
+- The official name is *conditional espression* but LS changed it to avoid confussion with `a == b` that is also called a *conditional espression*.
+- A ternary expression is a concise way to choose between two values based on some condition. They are often used as an expression on the right side of an assignment, as function arguments, and as function return values.
+
+```python
+value1 if condition else value2
+```
+- Python first evaluates the condition. If it's truthy, the expression returns value1. Otherwise, it returns value2. The return value is either value1 or value2, depending on which expression gets evaluated.
+

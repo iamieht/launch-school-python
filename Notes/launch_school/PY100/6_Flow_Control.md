@@ -82,5 +82,26 @@ print('42' < '420')       # True
 print('420' < '42')       # False
 ```
 
+### `>` and `>=`
 
+- The **greater than operator** (`>`) returns `True` when the value of the left operand has a value that is greater than the value on the right, `False` otherwise.
+- The **greater than or equal to operator** (`>=`) returns `True` when the values are equal. 
+
+```python
+print(4 > 5)              # False
+print(5 > 4)              # True
+print(5 > 5)              # False
+
+print(4 >= 5)             # False
+print(5 >= 4)             # True
+print(5 >= 5)             # True
+
+print('4' > '5')          # False
+print('5' > '4')          # True
+print('5' > '5')          # False
+
+print('42' > '402')       # True
+print('42' > '420')       # False
+print('420' > '42')       # True
+```
 

@@ -65,6 +65,89 @@ d['a'] = 'A'
 print(d)        # {'a': 'A', (1, 3): 3, 1: 'x'}
 ```
 
+## Sequence Constructors
+
+- You can also use special functions called **constructors** to create new objects. In fact, sometimes you can't use literals; you must use constructors to create ranges, frozen sets, and empty sets.
+
+### String Constructor
+
+- `str()` and `str(Python object)`
+
+```python
+str()            # returns '' (empty string)
+str('abc')       # returns 'abc'
+str(42)          # returns '42'
+str(3.141592)    # returns '3.141592'
+str(False)       # returns 'False'
+str(None)        # returns 'None'
+str(range(3, 7)) # returns 'range(3, 7)'
+str([1, 2, 3])   # returns '[1, 2, 3]'
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+str(Person('May'))
+# returns '<\_\_main\_\_.Person object at 0x...>'
+```
+
+### Range Constructor
+
+It comes in 3 forms:
+
+- `range(start, stop, step)`
+    - This constructor generates a sequence of integers between start and stop - 1 with an increment of step between each consecutive integer.
+    - You can use a negative step to generate a sequence in reverse order. In this case, the range ends at stop + 1. 
+
+```python
+r = range(5, 12, 2)
+print(list(r))            # [5, 7, 9, 11]
+
+r = range(12, 8, -1)
+print(list(r))            # [12, 11, 10, 9]
+
+r = range(12, 5, -2)
+print(list(r))            # [12, 10, 8, 6]
+```
+
+- `range(start, stop)`
+
+    - When you omit the step argument, Python uses a default value of 1. Hence, range(start, stop) is identical to range(start, stop, 1).
+
+- `range(stop)`
+
+    - When you omit the start argument, Python uses a default value of 0 for start. Hence, range(stop) is identical to range(0, stop, 1).
+
+- Ranges are **lazy sequences**: they don't create any element values until your program needs them.
+
+### The List, Tuple, Set, and Frozen Set Constructors
+
+Lists, tuples, sets, and frozen sets share two common constructor forms:
+
+- `list()` or `list(iterable)`
+- `tuple()` or `tuple(iterable)`
+- `set()` or `set(iterable)`
+- `frozenset()` or `frozenset(iterable)`
+
+- The constructors with no arguments create an empty list, tuple, set, or frozen set, as appropriate: a sequence or set with no members.
+- The constructors that take an iterable argument expect an object that Python can iterate: an iterable. From the built-in types, the iterables include all sequences, text strings, sets, and maps.
+
+```python
+my_str = 'Python'
+
+my_list = list(my_str)
+print(my_list)  # ['P', 'y', 't', 'h', 'o', 'n']
+
+my_tuple = tuple(my_list)
+print(my_tuple) # ('P', 'y', 't', 'h', 'o', 'n')
+
+my_set = set(my_tuple)
+print(my_set)   # {'t', 'o', 'n', 'h', 'P', 'y'}
+```
+
+
+
+
 
 
 

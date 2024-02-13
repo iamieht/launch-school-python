@@ -18,4 +18,4 @@ name_country = {
     'Yoshitaka':    'Japan',
 }
 
-print(name_country['Alice'])g
+print(name_country['Alice'])

@@ -105,3 +105,31 @@ print('42' > '420')       # False
 print('420' > '42')       # True
 ```
 
+## Logical Operators
+
+### `not`
+
+- The **not operator** returns `True` when its operand is `False` and `False` when the operand is `True`.
+- `not` takes a single operand, so it's called **unary operator**.
+- Operators that take two operators are **binary operators**.
+
+```python
+print(not True)           # False
+print(not False)          # True
+print(not(4 == 4))        # False
+print(not(4 != 4))        # True
+```
+
+### `and` and `or`
+
+- The `and` operator returns `True` when both operands are `True`. It returns `False` when either operand is `False`.
+- The `or` operator returns `True` when either operand is `True` and `False` when both operands are `False`
+
+| **A**     |   **B**   |   **A and B** |   **A or B**  |
+|-----------|-----------|---------------|---------------|
+|   `True`  |   `True`  |   `True`      |   `True`      |
+|   `True`  |   `False` |   `False`     |   `True`      |
+|   `False` |   `True`  |   `False`     |   `True`      |
+|   `False` |   `False` |   `False`     |   `False`     |
+
+

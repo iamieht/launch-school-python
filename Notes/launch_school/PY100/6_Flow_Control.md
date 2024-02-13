@@ -47,4 +47,16 @@ big_num = 12345678901234567
 print(float(big_num) == big_num)    # False
 ```
 
+### `!=`
+
+- The **inequality operator** is `==`'s inverse. 
+
+```python
+print(5 != 5)             # False
+print(5 != 4)             # True
+print('abc' != 'abc')     # False
+print('abc' != 'aBc')     # True
+print(5 != '5')           # True
+```
+
 

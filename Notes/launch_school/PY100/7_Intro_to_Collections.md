@@ -44,7 +44,26 @@ print(letters)
 # {'a', 'c', 'b'} (order may differ)
 ```
 
-## 
+## What are Maps?
+
+- Maps are types that maintain an **unordered** collection of **key/value** pairs (also called elements or members).
+- Maps are accessed by their keys.
+- Dictionary or `dict` type.
+- Dicts are mutable.
+- The keys in a dict must be unique.
+- Keys must be "hashable" values (immutable).
+- The values in each key/value pair may be any object.
+
+```python
+d = {'a': 1, (1, 3): 3, 1: 'x'}
+print(d)         # {'a': 1, (1, 3): 3, 1: 'x'}
+print(d['a'])    # 1
+print(d[(1, 3)]) # 3
+print(d[1])      # 'x'
+
+d['a'] = 'A'
+print(d)        # {'a': 'A', (1, 3): 3, 1: 'x'}
+```
 
 
 

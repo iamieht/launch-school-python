@@ -145,3 +145,43 @@ is_green(item) or has_wheels(item)
 - If either condition is False, then the overall result must be False.
 - If the program determines that item is not red, it doesn't have to determine whether it is also portable.Python short-circuits the rest of the expression by terminating evaluation if it determines that item isn't red. It doesn't need to call is_portable() since it already knows the expression must be False.
 
+## Truthiness
+
+- Python can evaluate every object's **truthiness** (Do not confuse with the terms `True` or `False` or Boolean).
+- Truthiness arises in conditional expressions (`if` and `while`). They don't need to produce Boolean values.
+- Built-in falsy values:
+    - `False`, `None`
+    - all numeric `0` values (integers, floats, complex)
+    - empty strings: `''`
+    - empty collections: `[]`, `()`, `{}`, `set()`, `frozenset()`, and `range(0)`
+    - Custom data types can also define additional falsy value(s)
+
+```python
+value = 5                     # 5 is truthy
+if value:
+    print(f'{value} is truthy')
+else:
+    print(f'{value} is falsy')
+```
+
+### Truthiness and Short-Circuit Evaluation
+
+- Logical operators don't always return `True` or `False`.
+- They only care about the truthiness of their operands. 
+- In each case, they evaluate as the object that evaluates last in the expression.
+
+```python
+print(3 and 'foo')   # last evaluated op: 'foo'
+print('foo' and 3)   # last evaluated op: 3
+print(0 and 'foo')   # last evaluated op: 0
+print('foo' and 0)   # last evaluated op: 0
+
+print(3 or 'foo')    # last evaluated op: 3
+print('foo' or 3)    # last evaluated op: 'foo'
+print(0 or 'foo')    # last evaluated op: 'foo'
+print('foo' or 0)    # last evaluated op: 'foo'
+print('' or 0)       # last evaluated op: 0
+print(None or [])    # last evaluated op: []
+```
+
+

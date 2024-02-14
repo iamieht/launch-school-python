@@ -364,3 +364,87 @@ my_list.clear()
 print(my_list)                # []
 ```
 
+### Sorting Collections
+
+- `sorted()` function: creates and returns a sorted list from any iterable collection, mutable or immutable. Original collection is unchanged.
+
+- `list.sort()` method: sorts and mutates the list. More perfomant than sorted function as it does an in-place sort (doesn't have to build a completely new list).
+
+- Both do an ascending sort. You can reverse the sort with the keyword argument `reverse=True`.
+
+```python
+names = ('Grace', 'Clare', 'Allison', 'Trevor')
+print(sorted(names))
+# ['Allison', 'Clare', 'Grace', 'Trevor']
+
+print(names)
+# ('Grace', 'Clare', 'Allison', 'Trevor')
+
+names = list(names)
+print(names)
+# ['Grace', 'Clare', 'Allison', 'Trevor']
+
+print(names.sort())   # None
+print(names)
+# ['Allison', 'Clare', 'Grace', 'Trevor']
+
+names = ['Grace', 'Clare', 'Allison', 'Trevor']
+print(sorted(names, reverse=True))
+# ['Trevor', 'Grace', 'Clare', 'Allison']
+
+names.sort(reverse=True)
+print(names) # ['Trevor', 'Grace', 'Clare', 'Allison']
+```
+
+- You can also pass a `key=func` keyword argument to tell sort or sorted how to determine what values it should sort. For instance, if you want to perform a case-insensitive sort on a list of strings, you can specify `key=str.lower`
+
+```python
+words = ['abc', 'DEF', 'xyz', '123']
+print(sorted(words))
+# ['123', 'DEF', 'abc', 'xyz']
+
+print(sorted(words, key=str.lower))
+# ['123', 'abc', 'DEF', 'xyz']
+```
+
+### Reversing Sequences and Dictionaries
+
+- `reverse()` function: reverses the order of elements in a sequence or dictionary. The returned value is a lazy sequence that contains the elements in the sequence or the keys from a dictionary.
+
+- `list.reverse()` method: reverses and mutates the list
+
+```python
+names = ('Grace', 'Clare', 'Allison', 'Trevor')
+reversed_names = reversed(names)
+print(reversed_names)
+# <reversed object at 0x102848e50>
+print(tuple(reversed(names))) # Requires extra memory
+# ('Trevor', 'Allison', 'Clare', 'Grace')
+print(names)
+# ('Grace', 'Clare', 'Allison', 'Trevor')
+
+names = list(names)
+print(names.reverse())   # None
+print(names)
+# ['Trevor', 'Allison', 'Clare', 'Grace']
+
+my_dict = {'abc': 1, 'xyz': 23, 'pqr': 0, 'jkl': 5}
+reversed_dict = reversed(my_dict)
+print(reversed_dict)
+# <dict_reversekeyiterator object at 0x100d19f80>
+
+print(list(reversed_dict))    # Requires extra memory
+# ['jkl', 'pqr', 'xyz', 'abc']
+```
+
+```python
+names = ('Grace', 'Clare', 'Allison', 'Trevor')
+for name in reversed(names):
+    print(name)
+# Trevor
+# Allison
+# Clare
+# Grace
+```
+
+

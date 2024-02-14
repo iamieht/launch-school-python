@@ -641,7 +641,41 @@ print('\n  '.join(words))
 #   lucky
 ```
 
+### Finding Substrings
 
+- `str.find()`: searches through string looking for the first occurrence of the argument and returns the index of the first matching substring, otherwise returns `-1`.
+
+- `str.rfind()`: does the same but it searches from right to left (reverse).
+
+```python
+school = 'launch school'
+
+print(school.find(' '))       # 6
+print(school.find('l'))       # 0
+print(school.find('h'))       # 5
+print(school.find('hoo'))     # 9
+print(school.find('x'))       # -1
+print(school.find('N'))       # -1
+
+print(school.rfind(' '))      # 6
+print(school.rfind('l'))      # 12
+print(school.rfind('h'))      # 9
+print(school.rfind('hoo'))    # 9
+print(school.rfind('oh'))     # -1
+print(school.rfind('N'))      # -1
+```
+
+- You can also search slices by adding start and end arguments to the invocation. `str.find('substr', start:stop)`
+
+```python
+text = 'abc abc def abc'
+
+print(text.find(' ', 4))         # 7
+print(text.find(' ', 8))         # 11
+
+print(text.find('c', 0, 2))      # -1
+print(text.rfind('c', 3, 10))    # 6
+```
 
 
 

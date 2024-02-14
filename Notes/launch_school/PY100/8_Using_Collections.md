@@ -144,5 +144,47 @@ my_set = {1, 3.14, -2.71}
 print(min(my_set), max(my_set))      # -2.71 3.14
 ```
 
+#### Summation
+
+- `sum` function is used with iterable collections which elements are numeric values. It returns the sum of all the collection's numbers.
+- `sum` cannot be used with strings
+
+```python
+numbers = (1, 1, 2, 3, 5, 8, 13, 21, 34)
+print(sum(numbers))                       # 88
+```
+
+#### Locating Indices and Counting
+
+- `seq.index`method returns the index of the first element in the sequence that matches a given object. It raises a `ValueError` exception if the object is not found.
+- Also works with strings. It searches for the first matching substring of a string.
+
+```python
+names = ['Karl', 'Grace', 'Clare', 'Victor',
+         'Antonina', 'Allison', 'Trevor']
+print(names.index('Clare'))   # 2
+print(names.index('Trevor'))  # 6
+print(names.index('Chris'))
+# ValueError: 'Chris' is not in list
+
+names = 'Karl Grace Clare Victor Antonina Trevor'
+print(names.index('Clare'))   # 11
+print(names.index('Trevor'))  # 33
+print(names.index('Chris'))
+# ValueError: substring not found
+```
+
+- `seq.count` returns the number of times a value occurs in the sequence.
+
+```python
+numbers = [1, 3, 6, 5, 4, 10, 1, 5, 4, 4, 5, 4]
+print(numbers.count(1))       # 2
+print(numbers.count(3))       # 1
+print(numbers.count(4))       # 4
+print(numbers.count(7))       # 0
+```
+
+
+
 
 

@@ -507,6 +507,53 @@ Methods to test what sort of characters are present in a string.
 - `str.isspace()`: returns `True` if all characters in string are **whitespace characters**, `False` otherwise or if string is empty. The whitespace characters include [ordinary spaces (` `), tabs (`\t`), newlines (`\n`), carriage returns (`\r`), vartical tabs (`\v`) and form feeds (`\f`), as well as some foreign characters that count as whitespace]
 
 
+### Stripping Characters
+
+- `str.strip()` method: returns a copy of string with leading and trailing whitespace characters removed.
+
+```python
+text = ' \t  abc def    \n\r'
+print(repr(text))             # ' \t  abc def    \n\r'
+print(repr(text.strip()))     # 'abc def'
+```
+
+- `str.strip()`: can also remove characters by providing a string argument. The characters inside this string are the ones you want removed.
+
+```python
+text = ' \t  abc def    \n\r'
+print(repr(text.strip('abc'))) # ' \t  abc def    \n\r'
+
+text = 'aaabaacccabxyzabccba'
+print(text.strip('a'))         # baacccabxyzabccb
+print(text.strip('a'))         # baacccabxyzabccb
+print(text.strip('ab'))        # cccabxyzabcc
+print(text.strip('ba'))        # cccabxyzabcc
+print(text.strip('abc'))       # xyz
+print(text.strip('bc'))        # aaabaacccabxyzabccba
+
+print(repr(text.strip('abcxyz'))) # ''
+```
+- `str.strip` removes individual characters, not substrings. That is, the order of the characters in the argument doesn't matter.
+
+- `str.lstrip` method: is identical to `str.strip` except it only removes leading characters (the leftmost)
+
+- `str.rstrip` method: removes trailing characters (the rightmost)
+
+```python
+text = 'aaabaacccabxyzabccba'
+
+print(text.lstrip('a'))       # baacccabxyzabccba
+print(text.rstrip('a'))       # aaabaacccabxyzabccb
+
+print(text.lstrip('ab'))      # cccabxyzabccba
+print(text.rstrip('ab'))      # aaabaacccabxyzabcc
+
+print(text.lstrip('ba'))      # cccabxyzabccba
+print(text.rstrip('ba'))      # aaabaacccabxyzabcc
+
+print(text.lstrip('abc'))     # xyzabccba
+print(text.rstrip('abc'))     # aaabaacccabxyz
+```
 
 
 

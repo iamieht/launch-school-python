@@ -698,8 +698,31 @@ TypeError: unhashable type: 'set'
 (1, 2, 3, [4, 5], {6, 7}, {'x': 'a dict'})
 ```
 
+## Comparing Collections
 
+- Python supports comparison operations for collections. It provides comparison mechanisms for all built-in iterable collections, and you can define comparisons for any custom iterables you create.
 
+-  If two iterables meet all of the following requirements, they are equal. Otherwise, they are unequal:
+    - They have the same type: (list, tuple, set, etc.) Note that sets and frozen sets are considered the same for comparison purposes.
+    - They have the same number of elements.
+    - For sequences, each pair of corresponding elements compares as equal.
+    - For sets, each set has the same members (order doesn't matter).
+    - For maps, each key/value pair must be present and identical in both maps (order doesn't matter).
+
+```python
+print([2, 3] == [2, 3])    # True
+print([2, 3] == [3, 2])    # False (diff sequence)
+print([2, 3] == [2])       # False (diff lengths)
+print([2, 3] == (2, 3))    # False (diff types)
+print({2, 3} == {3, 2})    # True (same members)
+
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'b': 2, 'a': 1}
+dict3 = {'a': 1, 'b': 2, 'c': 3}
+
+print(dict1 == dict2)      # True (same pairs)
+print(dict1 == dict3)      # False
+```
 
 
 

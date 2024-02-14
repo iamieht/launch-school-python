@@ -87,4 +87,62 @@ print(my_dict.get('nothing', 'N/A'))    # N/A
 print(my_dict.get('nothing', 100))      # 100
 ```
 
+## Common Collection Operations
+
+### Non-Mutating Operations for Collections
+
+#### Collection Membership
+
+- The `in` operator determines whether the object to the operator's left is in the iterable collection on the right. Returns `True` if the item is in the collection, `False` otherwise.
+- The `not in` operator is the inverse of `in`.
+- With sequences and sets, both opertors compare the object for equality against each collection element.
+- For maps, it checks whether the item is a key in the dictionary.
+- For strings, it determines whether the right string contains the left string.
+
+```python
+seq = [4, 'abcdef', (True, False, None)]
+print(4 in seq)                         # True
+print(4 not in seq)                     # False
+print('abcdef' in seq)                  # True
+print('abcdef' not in seq)              # False
+print('cde' in seq[1])                  # True
+print('cde' not in seq[1])              # False
+print('acde' in seq[1])                 # False
+print('acde' not in seq[1])             # True
+print((True, False, None) in seq)       # True
+print((True, False, None) not in seq)   # False
+print(3.14 in seq)                      # False
+print(3.15 not in seq)                  # True
+```
+
+#### Minimun and Maximun Members
+
+- `min` and `max` return the minimun and maximum members in an iterable collection.
+- Any pair of the collection's elements must be comparable with the `<` and `>` operators.
+- In most cases, you can't use `min` and `max` with heterogeneous collections, but it's possible in some situations (int and float)
+- You can use them with multiple arguments instead of an iterable.
+
+```python
+my_set1 = {1, 4, -9, 16, 25, -36, -63, -1}
+my_set2 = {'1', '4', '-9', '16', '25', '-36', '-1'}
+
+print(min(my_set1), max(my_set1))     # -63 25
+print(min(my_set2), max(my_set2))     # -1 4
+```
+```python
+>>> my_set = {1, 4, '-9', 16, '25', -36, -63, -1}
+>>> min(my_set)
+TypeError: '<' not supported between instances of
+'str' and 'int'
+
+>>> max(my_set)
+TypeError: '>' not supported between instances of
+'str' and 'int'
+```
+```python
+my_set = {1, 3.14, -2.71}
+print(min(my_set), max(my_set))      # -2.71 3.14
+```
+
+
 

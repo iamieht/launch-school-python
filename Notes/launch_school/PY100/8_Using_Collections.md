@@ -288,5 +288,43 @@ print(values)
 # dict_values(['345-6789', '555-6666', '123-4567'])
 ```
 
+### Operations for Mutable Sequences
+
+#### Adding Elements to Mutable Sequences
+
+- `seq.append`: appends a single object to the end of a mutable sequence
+
+```python
+numbers = [1, 2]
+
+numbers.append(10)      # Append the number 10
+print(numbers)          # [1, 2, 10]
+```
+
+- `seq.insert`: inserts an object before the element at a given index. If the index is equal or greater than the length of the sequence, the object will be appended. If the index is negative, it is count from the end of the sequence. Syntax: `seq.insert[before_index:element]`
+
+```python
+numbers = [1, 2]
+
+numbers.insert(0, 8)    # Insert 8 before numbers[0]
+print(numbers)          # [8, 1, 2]
+numbers.insert(2, 6)    # Insert 6 before numbers[2]
+print(numbers)          # [8, 1, 6, 2]
+numbers.insert(100, 55) # Insert 55 before numbers[100]
+print(numbers)          # [8, 1, 6, 2, 55]
+numbers.insert(-3, 33)  # Insert 33 before the 3rd element
+                        # from the end.
+print(numbers)          # [8, 1, 33, 6, 2, 55]
+```
+
+- `seq.extend`: appends the content of an iterable sequence to the calling iterable sequence.
+
+```python
+numbers = [1, 2]
+
+numbers.extend([7, 8])  # Append 7 and 8 to numbers
+print(numbers)          # [1, 2, 7, 8]
+```
+
 
 

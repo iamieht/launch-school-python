@@ -476,6 +476,37 @@ print('456ABC'.swapcase().swapcase())   # 456ABC
 print('Straße'.swapcase().swapcase())   # Strasse
 ```
 
+### Character Classification
+
+Methods to test what sort of characters are present in a string.
+
+- `str.isalpha()`: returns `True` is all characters of `str` are alphabetic, `False` otherwise or if string is empty.
+
+```python
+'Hello'.isalpha()      # True
+'Good-bye'.isalpha()   # False: `-` is not a letter
+'Four score'.isalpha() # False: space is not a letter
+''.isalpha()           # False
+```
+
+- `str.isdigit()`: returns `True` if all characters of string are digits,`False` otherwise or if string is empty.
+
+```python
+'12340'.isdigit()      # True
+'123.4'.isdigit()      # False: `.` is not a digit
+'-1234'.isdigit()      # False: `-` is not a digit
+''.isdigit()           # False
+```
+
+- `str.isalnum()`: returns `True` if string is composed entirely of letters and/or digits, `False` otherwise or if string is empty.
+
+- `str.islower()`: returns `True` if all cased characters in string are lowercase letters, `False` otherwise of if string doesn't contain case characters.
+
+- `str.isupper()`: returns `True` if all cased characters in string are uppercase, `False` otherwise of if the string contains no case characters.
+
+- `str.isspace()`: returns `True` if all characters in string are **whitespace characters**, `False` otherwise or if string is empty. The whitespace characters include [ordinary spaces (` `), tabs (`\t`), newlines (`\n`), carriage returns (`\r`), vartical tabs (`\v`) and form feeds (`\f`), as well as some foreign characters that count as whitespace]
+
+
 
 
 

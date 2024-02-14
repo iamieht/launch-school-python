@@ -677,6 +677,27 @@ print(text.find('c', 0, 2))      # -1
 print(text.rfind('c', 3, 10))    # 6
 ```
 
+## Nested Collections
+
+- Collections can be nested inside other collections.
+- You can't nest a mutable collection inside a set, but you can nest an immutable one: frozenset or tuple.
+- You can nest mutable collections inside a tuple and mutate it.
+
+```python
+>>> my_set = {1, 2, 3, [4, 5]}
+TypeError: unhashable type: 'list'
+
+>>> my_set = {1, 2, 3, {4, 5}}
+TypeError: unhashable type: 'set'
+
+>>> my_set = { 1, 2, 3, frozenset([4, 5]) }
+>>> my_set          # {frozenset({4, 5}), 1, 2, 3}
+
+>>> my_tuple = (1, 2, 3, [4, 5], {6, 7}, {'x': 'a dict'})
+>>> my_tuple
+(1, 2, 3, [4, 5], {6, 7}, {'x': 'a dict'})
+```
+
 
 
 

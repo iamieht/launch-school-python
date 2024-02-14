@@ -51,4 +51,40 @@ seq_dup = seq[:]
 print(seq[0] is seq_dup[0])   # True
 ```
 
+## Key-Based Access
+
+- Maps use key-based syntax.
+- Any hashable object can be used as a key
+- When using a non-existent key we get the error `KeyError:`
+- `dict.get` method returns the value associated with a given key if they exists, otherwise produces a default return value (usually `None`, but other values can be specified)
+- We can assign a new key to the dictionary: `my_dict['key'] = 'value'`
+- We cannot use mutable keys.
+
+```python
+my_dict = {
+    'a': 'abc',
+    37: 'def',
+    (5, 6, 7): 'ghi',
+    frozenset([1, 2]): 'jkl',
+}
+
+print(my_dict['a'])                # abc
+print(my_dict[37])                 # def
+print(my_dict[(5, 6, 7)])          # ghi
+print(my_dict[frozenset([1, 2])])  # jkl
+print(my_dict['nothing'])     # KeyError: 'nothing'
+
+my_dict = {
+    'a': 'abc',
+    37: 'def',
+    (5, 6, 7): 'ghi',
+    frozenset([1, 2]): 'jkl',
+}
+
+print(my_dict.get('a'))                 # abc
+print(my_dict.get('nothing'))           # None
+print(my_dict.get('nothing', 'N/A'))    # N/A
+print(my_dict.get('nothing', 100))      # 100
+```
+
 

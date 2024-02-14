@@ -95,7 +95,7 @@ print(my_dict.get('nothing', 100))      # 100
 
 - The `in` operator determines whether the object to the operator's left is in the iterable collection on the right. Returns `True` if the item is in the collection, `False` otherwise.
 - The `not in` operator is the inverse of `in`.
-- With sequences and sets, both opertors compare the object for equality against each collection element.
+- With sequences and sets, both operators compare the object for equality against each collection element.
 - For maps, it checks whether the item is a key in the dictionary.
 - For strings, it determines whether the right string contains the left string.
 

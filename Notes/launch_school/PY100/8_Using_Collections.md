@@ -184,6 +184,52 @@ print(numbers.count(4))       # 4
 print(numbers.count(7))       # 0
 ```
 
+#### Merging Collections
+
+- `zip` function merges the members/elements of multiple iterables into a single list of tuples.
+- Makes it easy to iterate through many collections simultaneously.
+- Each tuple in the list contains objects from each iterable (tuple1 contains all 0-indexed elements, tuple2 contains all 1-indexed elements, tupleN all Nth-indexed elements).
+- `zip's` result is a lazy sequence like `range`
+
+```python
+iterable1 = [1, 2, 3]
+iterable2 = ('Kim', 'Leslie', 'Bertie')
+iterable3 = [None, True, False]
+
+zipped_iterables = zip(iterable1, iterable2, iterable3)
+print(list(zipped_iterables))
+# Pretty printed for clarity
+# [
+#   (1, 'Kim', None),
+#   (2, 'Leslie', True),
+#   (3, 'Bertie', False)
+# ]
+```
+
+- `zip`'s collection arguments don't have to be of the same length. To enforce it, add `strict=True` to raise an exception in that case.
+
+```python
+zipped_iterables = zip(iterable1, iterable2, strict=True)
+```
+
+- If lengths are different and no `strict=True` is provided: `zip` stops after exhausting the shortest iterable, meaning the number of tuples in the generated list will be determined by the length of the shortest iterable
+
+```python
+result = zip(range(5, 10),    # length is 5
+             range(1, 3),     # length is 2 (shortest)
+             range(3, 7))     # length is 4
+print(list(result)) # [(5, 1, 3), (6, 2, 4)]
+```
+- `zip` returns an iterator, meaning can only be consumed once.
+
+```python
+result = zip(range(5, 10),    # length is 5
+             range(1, 3),     # length is 2 (shortest)
+             range(3, 7))     # length is 4
+print(list(result)) # [(5, 1, 3), (6, 2, 4)]
+print(list(result)) # []
+```
+
 
 
 

@@ -26,6 +26,8 @@ print(seq[-3])  # a (2nd to last element)
 - **Slicing** augmentation: can extract or modify any number of consecutive elements simultaneously.
 - Syntax: `seq[start:stop:step]`
 - Negative indexes are also supported
+- You get an empty slice when the start and stop values are the same.
+- Slicing performs a shallow copy if the sequence contains any collections (lists or tuples).
 
 ```python
 seq = 'abcdefghi'
@@ -33,16 +35,16 @@ print(seq[3:7])       # defg
 print(seq[-6:-2])     # defg
 print(seq[2:8:2])     # ceg
 print(repr(seq[3:3])) # ''
-print(seq[:])         # abcdefghi
-print(seq[::-1])      # ihgfedcba
+print(seq[:])         # abcdefghi => returns a duplicated sequence
+print(seq[::-1])      # ihgfedcba => returns a reverse copy of a sequence
 
 seq = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 print(seq[3:7])       # [4, 5, 6, 7]
 print(seq[-6:-2])     # [5, 6, 7, 8]
 print(seq[2:8:2])     # [3, 5, 7]
 print(seq[3:3])       # []
-print(seq[:])         # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-print(seq[::-1])      # [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+print(seq[:])         # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] => returns a duplicated sequence
+print(seq[::-1])      # [10, 9, 8, 7, 6, 5, 4, 3, 2, 1] returns a reverse copy of a sequence
 
 seq = [[1, 2], [3, 4]]
 seq_dup = seq[:]

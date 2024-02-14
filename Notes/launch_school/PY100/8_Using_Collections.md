@@ -555,6 +555,95 @@ print(text.lstrip('abc'))     # xyzabccba
 print(text.rstrip('abc'))     # aaabaacccabxyz
 ```
 
+### Splitting and Joining Strings
+
+- `str.split()` method: returns a list of the words in the string. By default the separator is a whitespace character. You can tell Python what character string should act as a delimiter.
+
+```python
+text = '  Four     score and   seven years ago.   '
+print(text.split())
+# ['Four', 'score', 'and', 'seven', 'years', 'ago.']
+
+print('no-spaces'.split()) # ['no-spaces']
+```
+
+```python
+text = ',Four,score,and,,,seven,years,ago,'
+print(text.split(','))
+# Pretty printed for clarity
+# [
+#     '',
+#     'Four',
+#     'score',
+#     'and',
+#     '',
+#     '',
+#     'seven',
+#     'years',
+#     'ago',
+#     ''
+# ]
+```
+- Specifying a delimiter changes the splitting behavior. Instead of looking for runs of whitespace, it splits the string at every occurrence of the delimiter.
+
+```python
+text = '  Four     score and   seven years ago.   '
+print(text.split(' '))
+# Partially pretty printed for clarity
+# ['', '', 'Four', '', '', '', '', 'score', 'and',
+#  '', '', 'seven', 'years', 'ago.', '', '', '']
+```
+
+- `split` also recognizes multi-character delimiters. Thety must match exactly.
+
+```python
+text = 'Four<>score<:>and<>seven<>years<>ago'
+print(text.split('<>'))
+# ['Four', 'score<:>and', 'seven', 'years', 'ago']
+```
+
+- `str.splitlines` method: returns a list of lines from the string. It looks for line-ending characters like `\n`, `\r`, `\n\r` and other boundaries.
+
+```python
+text = '''
+You were lucky to have a room. We used to have to
+live in a corridor.
+Oh we used to dream of livin' in a corridor!
+Woulda' been a palace to us. We used to live in an
+old water tank on a rubbish tip. We got woken up
+every morning by having a load of rotting fish
+dumped all over us.
+'''
+
+print(text.strip().splitlines())
+# Pretty printed for clarity
+[
+    "You were lucky to have a room. We used to have to",
+    "live in a corridor.",
+    "Oh we used to dream of livin' in a corridor!",
+    "Woulda' been a palace to us. We used to live in an",
+    "old water tank on a rubbish tip. We got woken up",
+    "every morning by having a load of rotting fish",
+    "dumped all over us."
+]
+```
+
+- `str.join` method: concatenates all strings in an iterable collection into a single long string.
+
+```python
+words = ['You', 'were', 'lucky']
+print(''.join(words))         # Youwerelucky
+print(' '.join(words))        # You were lucky
+print(','.join(words))        # You,were,lucky
+print('\n  '.join(words))
+# You
+#   were
+#   lucky
+```
+
+
+
+
 
 
 

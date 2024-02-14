@@ -326,5 +326,41 @@ numbers.extend([7, 8])  # Append 7 and 8 to numbers
 print(numbers)          # [1, 2, 7, 8]
 ```
 
+#### Removing Elements from Mutable Sequences
 
+- `seq.remove`: searches a sequence for a specific object and removes it. It raises `ValueError` is object doesn't exist.
+
+```python
+my_list = [2, 4, 6, 8, 10]
+
+my_list.remove(8)
+print(my_list)            # [2, 4, 6, 10]
+
+my_list.remove(8)
+# ValueError: list.remove(x): x not in list
+```
+
+- `seq.pop`: removes and returns an indexed element from a mutable sequence. If no index is given, it removes the last element in the sequence. Only works with mutable indexed sequences.
+
+```python
+my_list = [2, 4, 6, 8, 10]
+
+print(my_list.pop(1))         # 4
+print(my_list)                # [2, 6, 8, 10]
+
+print(my_list.pop())          # 10
+print(my_list)                # [2, 6, 8]
+
+print(my_list.pop(4))
+# IndexError: pop index out of range
+```
+
+- `seq.clear`: removes all elements from a sequence.
+
+```python
+my_list = [2, 4, 6, 8, 10]
+
+my_list.clear()
+print(my_list)                # []
+```
 

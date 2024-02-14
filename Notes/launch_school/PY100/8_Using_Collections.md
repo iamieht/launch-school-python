@@ -447,4 +447,37 @@ for name in reversed(names):
 # Grace
 ```
 
+## String Operations
+
+### Letter Case
+
+- `str.lower()`: returns a copy of the string with all the cased characters converted to lowercase.
+
+- `str.upper()`: returns a copy of the string with all the cased characters converted to uppercase.
+
+- `str.capitalize()`: returns a copy of the string with the first character capitalized and the rest converted to lowercase
+
+```python
+print("what's up?".capitalize())        # What's up?
+print('456ABC'.capitalize())            # 456abc
+```
+
+- `str.swapcase()`: returns a copy of the string with every uppercase letter converted to lowercase, and viceversa.
+
+```python
+print("What's up?".swapcase())          # wHAT'S UP?
+print('456ABC'.swapcase())              # 456abc
+print('456ABC'.swapcase().swapcase())   # 456ABC
+```
+
+- Note that there are situations where str.swapcase().swapcase() does not return the original value of str. For instance:
+
+```python
+print('Straße'.swapcase().swapcase())   # Strasse
+```
+
+
+
+
+
 

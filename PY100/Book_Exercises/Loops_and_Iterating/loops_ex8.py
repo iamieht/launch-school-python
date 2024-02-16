@@ -8,4 +8,3 @@ my_set = {
 }
 
 print({key: len(key) for key in my_set if len(key) % 2 != 0})
-git

@@ -37,3 +37,55 @@ print(upper_names);
 ## for Loops
 
 - Syntax: `for` <element> `in` <iterable>:
+
+```python
+names = ['Chris', 'Max', 'Karis', 'Victor']
+upper_names = []
+
+for name in names:
+    upper_name = name.upper()
+    upper_names.append(upper_name)
+    # Deleted: index += 1
+
+print(upper_names);
+# ['CHRIS', 'MAX', 'KARIS', 'VICTOR']
+```
+
+- Using a `for` loop with a dict iterates over the dict keys by default.
+
+```python
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+for key in my_dict:
+    print(key)
+# a
+# b
+# c
+```
+
+- If you want the values or pairs, you can request them with the values or items methods
+
+```python
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+for value in my_dict.values():
+    print(value)
+# 1
+# 2
+# 3
+```
+```python
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+for item in my_dict.items():
+    print(item)
+# ('a', 1)
+# ('b', 2)
+# ('c', 3)
+```
+
+- A more Pythonic way to iterate over both the keys and values simultaneously is to use tuple unpacking:
+
+```python
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+for key, value in my_dict.items():
+    print(f'{key} = {value}')
+```
+

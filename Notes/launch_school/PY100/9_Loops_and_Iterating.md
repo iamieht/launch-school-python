@@ -109,3 +109,62 @@ for suit in suits:
 
 print(deck)
 ```
+
+## Controlling Loops
+
+
+
+### Continuing a Loop with next iteration
+
+- `continue` starts a new loop iteration
+- When a loop encounters the `continue` keyword, it skips running the rest of the block and jumps ahead to the next iteration.
+- The `continue` statement tells Python to start the next iteration of the nearest enclosing loop. You can't start a new iteration of an outer loop if you're currently in an inner (nested) loop.
+
+```python
+names = ['Chris', 'Max', 'Karis', 'Victor']
+upper_names = []
+
+for name in names:
+    if name == 'Max':
+        continue
+
+    upper_name = name.upper()
+    upper_names.append(upper_name)
+
+print(upper_names);
+# ['CHRIS', 'KARIS', 'VICTOR']
+```
+
+### Breaking out of a loop
+
+- `break` terminates the loop early
+- The `break` statement tells Python to terminate the nearest enclosing loop once we find the desired element. You can't break out of an outer loop if you're currently in an inner (nested) loop.
+
+```python
+numbers = [3, 1, 5, 9, 2, 6, 4, 7]
+found_item = -1
+index = 0
+
+while index < len(numbers):
+    if numbers[index] == 5:
+        found_item = index
+        break
+
+    index += 1
+
+print(found_item)
+```
+
+### Emulating Do/While Loops
+
+- Suppose you want to iterate through a loop at least once, even if the condition is initially falsy.
+
+```python
+while True:
+    # main loop code is here
+    answer = input('Play again? (y/n) ')
+    if answer == 'n':
+        break
+```
+
+

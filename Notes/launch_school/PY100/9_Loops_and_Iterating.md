@@ -291,3 +291,17 @@ print(squares)
 squares = { number + 1 for number in range(1, 6) }
 print(squares)      # {2, 3, 4, 5, 6}
 ```
+
+### Why No Tuple, Range, or String Comprehensions?
+
+- Comprehensions don't build their results all at once. Each kind of comprehension works something like this:
+
+```python
+result = empty_collection               # [], {}, set()
+for item in collection:
+    result.append(item)
+```
+
+- As you can see, our result starts as an empty collection. We then modify the result collection during each iteration by appending a new item to result. From this, it's clear that the result must be a mutable type. Tuples are immutable, so Python can't have tuple comprehensions.
+
+- Since ranges and strings are also immutable, comprehensions can't create them.

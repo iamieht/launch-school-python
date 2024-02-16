@@ -255,3 +255,39 @@ deck = [ f'{rank} of {suit}'
          for rank in ranks ]
 print(deck)
 ```
+
+### Dictionay Comprehensions
+
+- Almost identical to list comprehensions, but they create new dictionaries instead of lists.
+- The most significant difference is that the expression component is now a key/value pair, each given by another expression.
+
+```python
+{ key: value for element in iterable if condition }
+```
+
+```python
+squares = { f'{number}-squared': number * number
+            for number in range(1, 6) }
+print(squares)
+# pretty-printed for clarity.
+{
+    '1-squared': 1,
+    '2-squared': 4,
+    '3-squared': 9,
+    '4-squared': 16,
+    '5-squared': 25
+}
+```
+
+### Set Comprehensions
+
+- **Set comprehensions** look almost identical to dict comprehensions. However, they create a new set instead of a dict and only have one expression to the left of the word for:
+
+```python
+{ expression for element in iterable if condition }
+```
+
+```python
+squares = { number + 1 for number in range(1, 6) }
+print(squares)      # {2, 3, 4, 5, 6}
+```

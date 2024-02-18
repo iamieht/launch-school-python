@@ -33,3 +33,25 @@ numbers = [1, 2, 3]
 print(numbers)
 ```
 - To do this, Python looks up the name `numbers` in its list of variables and sees it is on the stack at address 10240. On the stack, Python can see that the object associated with `numbers` is at address 4344278784. Finally, it passes that address to `print`, which formats and prints the object.
+
+## Variables and Shared Objects
+
+```python
+numbers2 = numbers
+```
+
+- Since `numbers2` is new, Python must create a new variable on the stack, which it does. We'll assume it's at address 10256. It then determines the memory address of the object assigned to `numbers` and stores that address in `numbers2`'s stack item. That means both `numbers` and `numbers2` now point to the same object. You can verify this by using the `id` function or the `is` operator:
+
+```python
+print(id(numbers) == id(numbers2))      # True
+print(numbers is numbers2)              # True
+```
+
+- our variables and objects are now organized like this in memory:
+
+![[Pasted image 20240218083317.png]]
+
+- The variables are in different places on the stack. However, they both reference the same object.
+- Pointers have a curious effect when you assign a variable that references an existing object to another variable. Instead of copying the object referenced by the variable on the right to the variable on the left, Python only copies the pointer. Thus, when we initialize `numbers2` with `numbers`, we make both `numbers` and `numbers2` point to the same list object: `[1, 2. 3]`. It's not just the same value but the same list at the same address. The two variables are independent, but since they point to the same list, that list depends on what you do with both `numbers` and `numbers2`.
+
+## 

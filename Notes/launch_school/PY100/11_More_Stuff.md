@@ -92,3 +92,59 @@ top()
 - When Python encounters a `def` statement, it merely reads the function definition into memory. It saves it away as an object in the heap. The function's body isn't executed until it's called explicitly. In this code, this read-and-save-but-don't-execute process occurs when Python encounters both functions. When we eventually invoke `top` on line 7, Python knows what and where `top` and `bottom` are.
 - Python also knows what code those function contain. Thus, when `top` tries to invoke `bottom`, Python only has to find and call the `bottom` function object. That means the code runs correctly even though `bottom` was defined after `top` was.
 - you should define all your functions before you try to invoke the first one. This is why Pythonistas almost always put the main program code at the bottom of the program after declaring all functions.
+
+## The global and nonlocal Statements
+
+- By default, Python assumes that all variables that are assigned a value inside a function are local variables. Even if a variable by the same name exists in an outer scope, Python will create a new local variable if the variable's name appears on the left side of an assignment.
+
+```python
+greeting = 'Salutations'
+
+def well_howdy(who):
+    greeting = 'Howdy'
+    print(f'{greeting}, {who}')
+
+well_howdy('Angie')
+print(greeting)
+```
+
+- Python's `global` and `nonlocal` statements let the programmer override this behavior. They tell Python to use a variable that is defined elsewhere. Python will not create a new local variable when `global` or `nonlocal` is used to override this behavior.
+- In the case of `global`, Python is told to look to the outermost scope (the global scope) for the variable to be used. It works in any function.
+- The `nonlocal` statement, however, only works in nested functions: functions that are defined inside an outer function. When Python processes a `nonlocal` statement, it looks for the associated variable in one of the outer functions.
+
+```python
+greeting = 'Salutations'
+
+def well_howdy(who):
+    global greeting
+    greeting = 'Howdy'
+    print(f'{greeting}, {who}')
+
+well_howdy('Angie')
+print(greeting)
+```
+
+```python
+def outer():
+    def inner1():
+        def inner2():
+            nonlocal foo
+            foo = 3
+            print(f`inner1 -> {foo}`)
+
+        nonlocal foo
+        foo = 2
+        inner2()
+        print(f`inner2 -> {foo}`)
+
+    foo = 1
+    inner1()
+    print(f`outer -> {foo}`)
+
+outer()
+
+inner1 -> 3
+inner2 -> 3
+outer -> 3
+```
+

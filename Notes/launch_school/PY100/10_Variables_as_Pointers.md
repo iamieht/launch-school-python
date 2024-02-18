@@ -83,3 +83,80 @@ print(numbers is numbers2)    # False
 - numbers2 = [1, 2, 3] creates a new object, which we assigned to `numbers2`. Thus, assuming that the new object is at address 4344281536, memory now looks like this:
 
 ![[Pasted image 20240218084557.png]]
+
+## Shallow vs. Deep Copies
+
+- Most copies created by Python are shallow copies.
+- The `copy.copy` and `copy.deepcopy` functions from the built-in `copy` module are Python's primary ways to create shallow and deep copies, respectively.
+- Built-in constructors create shallow copies as well:
+
+```python
+my_list = [[1, 2], 3, 4]
+shallow = list(my_list)
+print(shallow[0] is my_list[0])         # True
+
+my_dict = {'abc': [1, 2, 3]}
+shallow = dict(my_dict)
+print(shallow['abc'] is my_dict['abc']) # True
+```
+
+### Shallow Copies
+
+- A **shallow copy** of an object is a duplicate of the original object's outermost (topmost) level. Any nested objects within the copied object aren't duplicated; they still reference the nested objects from the original object. Thus, if you mutate the nested objects in the original, those mutations will be visible in the duplicate.
+- Thus, our shallow copy only duplicated the outermost level of the original list object. The inner list remains shared between the original and duplicate lists.
+
+```python
+import copy
+
+orig = [[1, 2], 3, 4]
+dup = copy.copy(orig)
+
+print(orig is dup)           # False
+print(orig == dup)           # True
+orig[2] = 44
+print(dup)                   # [[1, 2], 3, 4]
+
+print(orig[0] is dup[0])     # True
+orig[0][1] = 22
+print(dup[0])                # [1, 22]
+```
+
+- For completeness, here's what memory looks like now.
+
+![[Pasted image 20240218090226.png]]
+
+### Deep Copies
+
+- A **deep copy** of an object is an exact duplicate of the original object at the outermost (or topmost) level and every nested object, no matter how deeply nested. There's basically nothing you can do to the original object that can be seen in the duplicate or vice versa.
+
+```python
+import copy
+
+orig = [[1, 2], 3, 4]
+dup = copy.deepcopy(orig)
+
+print(orig is dup)           # False
+print(orig == dup)           # True
+orig[2] = 44
+print(dup)                   # [[1, 2], 3, 4]
+
+print(orig[0] is dup[0])     # False
+orig[0][1] = 22
+print(dup[0])                # [1, 2]
+```
+
+- Here's our final look at the memory picture. We now have two independent "Inner list" objects.
+
+![[Pasted image 20240218092136.png]]
+
+- frozensets do not implement the copy nor deepcopy function, so they always return a new object when using shallow or deep copies.
+### Should I make deep or shallow copies?
+
+- The answer to this question depends on your data structure, whether your data structure has mutable content.
+- In practice, shallow copies are frequently okay. They work best when:
+	- working with objects that are not collections, e.g., integers and booleans.
+	- working with immutable objects with no mutable components, e.g., strings.
+	- working with collections that have no mutable elements, e.g., tuples that don't contain mutable elements.
+	- needed for performance reasons. Shallow copies are always faster.
+	- you don't care if the mutable components of an object are shared.
+- You should use deep copies when shallow copies are not okay. In particular, they work best when working with collections that have mutable elements, e.g., nested lists.

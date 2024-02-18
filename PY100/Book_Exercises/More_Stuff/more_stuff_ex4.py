@@ -1,6 +1,5 @@
 # Write a function called increment_counter that increments a counter variable every time it is called.
 counter = 0
-g
 
 
 def increment_counter():

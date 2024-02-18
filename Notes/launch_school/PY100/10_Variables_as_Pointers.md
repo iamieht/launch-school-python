@@ -54,4 +54,32 @@ print(numbers is numbers2)              # True
 - The variables are in different places on the stack. However, they both reference the same object.
 - Pointers have a curious effect when you assign a variable that references an existing object to another variable. Instead of copying the object referenced by the variable on the right to the variable on the left, Python only copies the pointer. Thus, when we initialize `numbers2` with `numbers`, we make both `numbers` and `numbers2` point to the same list object: `[1, 2. 3]`. It's not just the same value but the same list at the same address. The two variables are independent, but since they point to the same list, that list depends on what you do with both `numbers` and `numbers2`.
 
-## 
+## Equality and Identity
+
+- Two objects, `obj1` and `obj2`, are said to be **equal** when `obj1 == obj2` returns `True`.
+- The objects are the same object when `obj1 is obj2` returns `True`.
+- We can also say that `obj1` and `obj2` have the same identity since `id(obj1)` and `id(obj2)` return the same value when `obj1 is obj2` returns `True`.
+
+```python
+numbers = [1, 2, 3]
+numbers2 = numbers
+
+print(numbers)                # [1, 2, 3]
+print(numbers == numbers2)    # True
+print(numbers is numbers2)    # True
+```
+
+```python
+numbers = [1, 2, 3]
+numbers2 = [1, 2, 3]
+
+print(numbers)                # [1, 2, 3]
+print(numbers == numbers2)    # True
+print(numbers is numbers2)    # False
+```
+
+- In both cases, `numbers` and `numbers2` are equal since `numbers1 == numbers` returns `True`.
+- In example 2, they are entirely different objects even though they have the same values.
+- numbers2 = [1, 2, 3] creates a new object, which we assigned to `numbers2`. Thus, assuming that the new object is at address 4344281536, memory now looks like this:
+
+![[Pasted image 20240218084557.png]]

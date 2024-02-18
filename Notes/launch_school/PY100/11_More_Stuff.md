@@ -56,3 +56,39 @@ import math as m
 
 print(m.sqrt(m.pi))         # 1.7724538509055159
 ```
+
+### The math Module
+
+```python
+import math
+print(math.sqrt(36))        # 6.0
+print(math.sqrt(2))         # 1.4142135623730951
+```
+
+### The datetime Module
+
+- Python's `datetime` module provides classes for creating and manipulating objects representing a time and date.
+
+```python
+from datetime import datetime as dt
+
+date = dt.strptime("July 16, 2022", "%B %d, %Y")
+weekday_name = date.strftime('%A')
+print(weekday_name)                   # Saturday
+```
+
+## Function Definition Order
+
+```python
+def top():
+    bottom()
+
+def bottom():
+    print('Reached the bottom')
+
+top()
+```
+
+- When Python encounters a `def` statement, it merely reads the function definition into memory. It saves it away as an object in the heap. The function's body isn't executed until it's called explicitly. In this code, this read-and-save-but-don't-execute process occurs when Python encounters both functions. When we eventually invoke `top` on line 7, Python knows what and where `top` and `bottom` are.
+- Python also knows what code those function contain. Thus, when `top` tries to invoke `bottom`, Python only has to find and call the `bottom` function object. That means the code runs correctly even though `bottom` was defined after `top` was.
+- you should define all your functions before you try to invoke the first one. This is why Pythonistas almost always put the main program code at the bottom of the program after declaring all functions.

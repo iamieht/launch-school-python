@@ -1,5 +1,16 @@
 # Intro
 
+## Some definitions first
+
+* **Abstraction** ensures that users don't need to know what's happening under the hood.
+* **Unicode** is a character set that lets computers work with almost any language.
+* **[ASCII](https://www.ascii-code.com/ASCII)** is a character set that contains 128 characters consisting of:
+    * The English letters (A-Z and a-z)
+    * The 10 Arabic numerals (0-9)
+    * almost 3-dozen control characters like line feeds and carriage returns
+    * almost 3-dozen punctuation characters and symbols
+
+
 * Data in any programming language has different data types.
 * Data types determined what and what not can be done with the data.
 * Everything with a value in Python is an **object**. Each **object** has an associated **data type** or **type**, which has an associated **class**.

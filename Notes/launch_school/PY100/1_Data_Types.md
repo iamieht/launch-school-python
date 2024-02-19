@@ -151,6 +151,7 @@ Man: "No you haven't!"
 
 - You can escape characters with (" \\ ")
 - The backslash or escape character tells the computer that the next character isn't syntactic but part of the string.
+- You can access the individual characters in a string with the [] indexing syntax.
 
 ```python
 print("""My nickname is "Wolfy". What's yours?""")
@@ -206,7 +207,7 @@ print(type(my_tuple))        # <class 'tuple'>
 
 - A **range** is a sequence of integers between two endpoints.
 - Mostly used for iteration.
-- Range doesn't produce the integers before a program ask for it. This optimizes memory.
+- Range doesn't produce the integers before a program ask for it. This optimizes memory. They are lazy sequences.
 - Examples
 
 ```python
@@ -231,7 +232,7 @@ print(type(my_tuple))        # <class 'tuple'>
 - Represent an unordered collection of objects stored as key-value pairs.
 - Keys are usually represented by strings and are a unique identifier for a specific object in the map.
 - The value is the object associated with the Key.
-- Python term for Map is **dictionary (dict)**
+- **dictionary (dict)** is the most common Map in Python
 - Literal: **dict** {}
 - Elements are separated by commas. {key:value,...}
 - You can access objects in a dict with the [] key access syntax

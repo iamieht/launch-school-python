@@ -1,11 +1,14 @@
 # Intro
 
 * Data in any programming language has different data types.
-* Data types determined what and what not can be done with the data.
+* Data types determine what can and what cannot be done with the data.
+* Everything you do in Python involves data and data types.
 * Everything with a value in Python is an **object**. Each **object** has an associated **data type** or **type**, which has an associated **class**.
 * **Objects** are instances of a **class**.
 
 ## Data Types in Python
+
+**NOTE**: Python has no concept of "primitive" vs "non-primitive"... instead, types are either "simple" or "compound"
 
 |Data Type|Class|Category|Kind|Mutable|
 |---|---|---|---|---|
@@ -24,6 +27,7 @@
 |functions|`function`|functions|_--?--_|No|
 |`NoneType`|`NoneType`|nulls|_--?--_|No|
 
+
 What are primitive types?
 
 * The most fundamental data types
@@ -39,6 +43,7 @@ What is the definition of mutable/immutable?
 
 ## Literals
 
+* Are used to represent most data type values.
 * A literal is any syntactic notation used to represent an object in source code.
 * They are used to represent most data types.
 * Examples:

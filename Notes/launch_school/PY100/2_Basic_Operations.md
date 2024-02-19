@@ -131,7 +131,7 @@ print('FOO' != 'foo') # True (Case matters)
 ```
 
 - If `a` and `b` have different data types, `a == b` usually returns `False` while `a != b` returns `True`. However, numbers are an exception: all built-in and standard number types can be compared for equality without regard to their specific types. Thus, `1 == 1.0` is `True`.
-- f `a` and `b` have the same data type, `a == b` almost always returns `True` if the two objects have the same value, while `a != b` returns `False`.
+- If `a` and `b` have the same data type, `a == b` almost always returns `True` if the two objects have the same value, while `a != b` returns `False`.
 - When working with standard and non-standard types, all bets are off. While most non-builtin types obey the same rules, not all do. The only way to be sure is to study the documentation, look at the source code, or try to determine the behavior from tests.
 
 ## Ordered Comparisons
@@ -168,6 +168,7 @@ print('3' > '24')        # True
 print('24' > '3')        # False
 ```
 
+- Strings are compared **lexicographically**, meaning they are compared character-by-character from left-to-right. 
 - Python compares strings character-by-character from left to right in both strings. The comparison stops as soon as Python reaches a decision.
 - `'abcdef' > 'abc'`. In this example, the strings have unequal sizes. Furthermore, the longer string is identical up to the shorter string's length. Python returns `True` here; when it can no longer take characters from the shorter string, it concludes that the longer string has the greater value. Similar behaviors occur with the other ordered comparison operators.
 - It's also worth noting that even numeric strings are compared character by character. Thus, `'3' > '24'` returns `True` since the character `3` is greater than the character `2`.

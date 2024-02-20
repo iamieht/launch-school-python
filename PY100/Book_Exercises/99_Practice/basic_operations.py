@@ -10,3 +10,6 @@ print(first_name + ' ' + last_name)
 
 print('-------------String Interpolation-------------------')
 print(f'{first_name} {last_name}')
+
+print('-------------String Repetitive Concatenation')
+print('Ivan ' * 3)

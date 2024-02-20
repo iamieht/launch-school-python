@@ -13,3 +13,17 @@ print(f'{first_name} {last_name}')
 
 print('-------------String Repetitive Concatenation')
 print('Ivan ' * 3)
+
+# 2. Extract the individual digits of 4936
+print('--------------Extracting the digits of 4936----------')
+number = 4936
+one = number % 10
+number = number // 10
+tens = number % 10
+number = number // 10
+hundreds = number % 10
+number = number // 10
+thousands = number % 10
+
+print(f'One place is {one}, Tens place is {tens}',
+      f'Hundreds place is {hundreds}, Thousands place is {thousands}')

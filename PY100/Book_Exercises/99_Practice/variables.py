@@ -67,3 +67,18 @@ print(f'In 10 years, you will be {age + 10} years old.')
 print(f'In 20 years, you will be {age + 20} years old.')
 print(f'In 30 years, you will be {age + 30} years old.')
 print(f'In 40 years, you will be {age + 40} years old.')
+
+# 7. What happens when you run the following code? Why?
+print()
+print("-----------------------Reassignment of Constants--------------------")
+NAME = 'Victor'
+print('Good Morning, ' + NAME)
+print('Good Afternoon, ' + NAME)
+print('Good Evening, ' + NAME)
+
+NAME = 'Nina'
+print('Good Morning, ' + NAME)
+print('Good Afternoon, ' + NAME)
+print('Good Evening, ' + NAME)
+
+# In line 74 we initialize a constant NAME with the string value 'Victor' and the next 3 lines we do a string concatenation of a greting + the constant NAME and we pass it to the print function. In Line 79 we reassignt the constant NAME, which is a bad practice as constant must not me reassigned. Unfortunately Python does not have true constants, so we use the SCREAMING_SNAKE_CASE name convention to reflect the constant in out programs.

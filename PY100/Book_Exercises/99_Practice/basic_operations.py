@@ -50,4 +50,13 @@ print()
 print("---------------Coercion-----------------------------------------")
 print(int('5') + int('10'))
 
-# We see coercion in action in this piece of code. We explicitely tell Python to coerce the string operands into an integer by using the int constructor function and passing the argument "5" and the argument "10" respectively. The result will be the integer 15 which will be passed as an argument to the print function to log it in th terminal
+# We see coercion in action in this piece of code. We explicitely tell Python to coerce the string operands into an integer by using the int constructor function and passing the argument "5" and the argument "10" respectively. The result will be the integer 15 which will be passed as an argument to the print function to log it in the terminal
+
+# 5. Will an error occur if you try to access a list element with an index greater than or equal to the list's length? For example:
+print()
+print("---------------IndexError: list index out of range--------------")
+
+print("foo=['a', 'b', 'c']")
+print('foo[3]')      # will this result in an error?
+
+# Yes, this will raise the exception IndexError: list index out of range as we are trying to access an element from an index that doesn't exist. Python only allows indexing with Inbound indexes. This error is typically known as off-by-one error.

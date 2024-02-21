@@ -34,3 +34,11 @@ thousands = number % 10
 
 print(f'One place is {ones}, Tens place is {tens}',
       f'Hundreds place is {hundreds}, Thousands place is {thousands}')
+
+# In this example there are two arithmetic operations, modulus and integer division. Modulus returns the remainder of a division, so 4936 divided by 10 is 493.6, modulus 10, returns 6, which in this case is a remainder. When doing integer divion, the return value is a whole number that is less than or equal the floating point result, in this case 4936 // 10 is 493, remainder 6.
+
+# 3. What does the following code do? Why?
+
+print('5' + '10')
+
+# The plus (+) operator concatenates the string operands '5' and '10', resulting in a nwe string '510', which is then passed as an argument to the print function, which will log the result in the terminal.

@@ -48,3 +48,11 @@
 # operand2      non-idiomatic   must use CamelCase format
 # BigNumber3    idiomatic
 # Πi            non-idiomatic   not an ASCII character
+
+# 5. Write a program named greeter.py that greets 'Victor' three times. Your program should use a variable and not hard code the string value 'Victor' in each greeting.
+name = 'Victor'
+print(f'Good Morning, {name}.')
+print(f'Good Afternoon, {name}.')
+print(f'Good Evening, {name}.')
+
+# First we create a variable name that holds the value 'Victor'. Then we invoke the print function we use an f-string containing a literal string and inside curly braces we interpolate the variable name, which references the value 'Victor'.

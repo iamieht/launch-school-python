@@ -71,6 +71,13 @@ print('foo' == 'Foo')
 # 7.What will the following code do? Why?
 print()
 print("----------------ValueError--------------------------------------------")
-print(int('3.1415'))
+print("int('3.1415')")
 
 # We are trying to explicitly coerce the string value '3.1414' into an integer by invoking the int construction function, but this will throw an error as the constructor cannot convert a string into an integer when the string value is not a valid integer representation. In this case the string is similar to a float. The int constructor function will raise an error if we pass anything except digits.
+
+# 8. To what value does the following expression evaluate?
+print()
+print("---------------'12' < '9'----------------------------------------------")
+print('12' < '9')
+
+# The expression evaluates as True. When doing String comparisons, Python performs a character-by-character comparison from left to right. So, Python starts comparing '1' < '9' and the result is True, so it stops comparing the remaining characters as the left operand is longer than the right operand

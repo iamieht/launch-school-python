@@ -67,3 +67,10 @@ print("--------------'foo' == 'Foo'-------------------------------------")
 print('foo' == 'Foo')
 
 # This expression evaluates to the boolean value False as string comparison is case sensitive, so 'foo' is not the same as 'Foo', due to the capital 'F'.
+
+# 7.What will the following code do? Why?
+print()
+print("----------------ValueError--------------------------------------------")
+print(int('3.1415'))
+
+# We are trying to explicitly coerce the string value '3.1414' into an integer by invoking the int construction function, but this will throw an error as the constructor cannot convert a string into an integer when the string value is not a valid integer representation. In this case the string is similar to a float. The int constructor function will raise an error if we pass anything except digits.

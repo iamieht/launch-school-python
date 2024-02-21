@@ -101,3 +101,16 @@ balance *= 1.05
 print(balance)
 
 # With augmented assignment we start with the current variable value, do an arithmetic operation, in this case multiplication, and the computed result is assigned back to the variable.
+print()
+print("------------------- several operations -------------------------------")
+obj = 42            # => assignment (initialization)
+obj = 'ABcd'        # => reassignment
+obj.upper()         # => neither
+obj = obj.lower()   # => reassignment
+print(len(obj))     # => neither
+obj = list(obj)     # => reassignment
+obj.pop()           # => mutation
+obj[2] = 'X'        # => mutation
+obj.sort()          # => mutation
+set(obj)            # => neither
+obj = tuple(obj)    # => reassignment

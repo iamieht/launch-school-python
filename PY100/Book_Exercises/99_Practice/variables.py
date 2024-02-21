@@ -82,3 +82,9 @@ print('Good Afternoon, ' + NAME)
 print('Good Evening, ' + NAME)
 
 # In line 74 we initialize a constant NAME with the string value 'Victor' and the next 3 lines we do a string concatenation of a greting + the constant NAME and we pass it to the print function. In Line 79 we reassignt the constant NAME, which is a bad practice as constant must not me reassigned. Unfortunately Python does not have true constants, so we use the SCREAMING_SNAKE_CASE name convention to reflect the constant in out programs.
+
+# 8. Assume you have $1,000.00 in the bank, and you've somehow managed to find a bank that pays you 5% (this is a wish-fulfillment fantasy) compounded interest every year. After one year, you will have $1,050 ($1,000 times 1.05). After two years, you will have $1,050 times 1.05, or $1102.50. Create a variable named balance that contains the amount of money you will have after 5 years, then print the result. Use a single expression if you can to set balance to the correct value.
+print()
+print("------------------ Balance after 5 years -----------------------------")
+balance = 1000 * 1.05 * 1.05 * 1.05 * 1.05 * 1.05
+print(balance)

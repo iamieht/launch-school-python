@@ -60,3 +60,10 @@ print("foo=['a', 'b', 'c']")
 print('foo[3]')      # will this result in an error?
 
 # Yes, this will raise the exception IndexError: list index out of range as we are trying to access an element from an index that doesn't exist. Python only allows indexing with Inbound indexes. This error is typically known as off-by-one error.
+
+# 6. To what value does the following expression evaluate?
+print()
+print("--------------'foo' == 'Foo'-------------------------------------")
+print('foo' == 'Foo')
+
+# This expression evaluates to the boolean value False as string comparison is case sensitive, so 'foo' is not the same as 'Foo', due to the capital 'F'.

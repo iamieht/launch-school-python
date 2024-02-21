@@ -36,3 +36,15 @@
 # operand2      non-idiomatic   must be in SCREAMING_SNAKE_CASE
 # BIG_NUMBER    idiomatic
 # π             non-idiomatic   not an ASCII character
+
+# 4. Classify the following potential class names as idiomatic, non-idiomatic, or illegal. For the non-idiomatic and illegal names, explain your choice.
+
+# Name      Classification
+# -------------------------
+# index         non-idiomatic   must use CamelCase format
+# CatName       idiomatic
+# Lazy_Dog      non-idiomatic   there is an underscode separating the words
+# 1ST           illegal         cannot start with a number
+# operand2      non-idiomatic   must use CamelCase format
+# BigNumber3    idiomatic
+# Πi            non-idiomatic   not an ASCII character

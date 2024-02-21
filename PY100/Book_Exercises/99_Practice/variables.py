@@ -88,3 +88,16 @@ print()
 print("------------------ Balance after 5 years -----------------------------")
 balance = 1000 * 1.05 * 1.05 * 1.05 * 1.05 * 1.05
 print(balance)
+
+# 9. Repeat the previous question but, this time, use augmented assignment to compute the final result, one year at a time.
+print()
+print("------------------ Augmented assignment ---------------------------")
+balance = 1000
+balance *= 1.05
+balance *= 1.05
+balance *= 1.05
+balance *= 1.05
+balance *= 1.05
+print(balance)
+
+# With augmented assignment we start with the current variable value, do an arithmetic operation, in this case multiplication, and the computed result is assigned back to the variable.

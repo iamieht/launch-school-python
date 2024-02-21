@@ -56,3 +56,14 @@ print(f'Good Afternoon, {name}.')
 print(f'Good Evening, {name}.')
 
 # First we create a variable name that holds the value 'Victor'. Then we invoke the print function we use an f-string containing a literal string and inside curly braces we interpolate the variable name, which references the value 'Victor'.
+
+# 6. Write a program named age.py that includes someone's age and then calculates and reports the future age 10, 20, 30, and 40 years from now.
+
+print()
+print("-------------------age.py---------------------------------------")
+age = 46
+print(f'You are {age} years old.')
+print(f'In 10 years, you will be {age + 10} years old.')
+print(f'In 20 years, you will be {age + 20} years old.')
+print(f'In 30 years, you will be {age + 30} years old.')
+print(f'In 40 years, you will be {age + 40} years old.')

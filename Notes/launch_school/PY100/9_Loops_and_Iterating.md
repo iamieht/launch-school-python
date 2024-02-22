@@ -36,19 +36,19 @@ print(upper_names);
 
 ## for Loops
 
-- Syntax: `for` <element> `in` <iterable>:
+- Syntax: `for` <element> `in` <iterable>
 
-```python
-names = ['Chris', 'Max', 'Karis', 'Victor']
-upper_names = []
+```python`
+`names = ['Chris', 'Max', 'Karis', 'Victor']`
+`upper_names = []`
+ 
+`for name in names:`
+    `upper_name = name.upper()`
+    `upper_names.append(upper_name)`
+    `# Deleted: index += 1`
 
-for name in names:
-    upper_name = name.upper()
-    upper_names.append(upper_name)
-    # Deleted: index += 1
-
-print(upper_names);
-# ['CHRIS', 'MAX', 'KARIS', 'VICTOR']
+`print(upper_names);`
+`# ['CHRIS', 'MAX', 'KARIS', 'VICTOR']`
 ```
 
 - Using a `for` loop with a dict iterates over the dict keys by default.
@@ -64,7 +64,7 @@ for key in my_dict:
 
 - If you want the values or pairs, you can request them with the values or items methods
 
-```python
+```python 
 my_dict = {'a': 1, 'b': 2, 'c': 3}
 for value in my_dict.values():
     print(value)
@@ -72,6 +72,7 @@ for value in my_dict.values():
 # 2
 # 3
 ```
+
 ```python
 my_dict = {'a': 1, 'b': 2, 'c': 3}
 for item in my_dict.items():
@@ -111,8 +112,6 @@ print(deck)
 ```
 
 ## Controlling Loops
-
-
 
 ### Continuing a Loop with next iteration
 

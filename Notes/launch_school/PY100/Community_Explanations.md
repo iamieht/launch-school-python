@@ -18,3 +18,28 @@ IMPORTANT: **expressions cannot contain statements** (e.g. the `for` and `if` fl
 - **routines** comprise **procedures** and **functions**
 	 - a **procedure** is a routine that can accept arguments but does **not return** any value
 	 - a **function** is a routine that can accept arguments and **returns** 1+ values
+
+
+
+## Operator Precedence
+
+| Operator | Description |
+| ---- | ---- |
+| `(expressions...)`<br><br>`[expressions...]`<br>`{key: value...}`<br>`{expressions...}` | binding/parenthesised expr.<br><br>list display<br>dictionary display<br>set display |
+| `x[index]`<br>`x[index:index]`<br>`x(arguments...)`<br>`x.attribute` | indexing<br>slicing<br>call<br>attribute reference |
+| `await x` | `await` expr. |
+| `**` | exponentiation |
+| `+x`, `-x`, `~x` | positive, negative, bitwise NOT |
+| `*`, `@`, `/`, `//`, `%` | multipl., matrix multipl., division, floor/int. division, mod |
+| `+`, `-` | addition, subtraction |
+| `<<`, `>>` | bitwise left shift, right shift |
+| `&` | bitwise AND |
+| `^` | bitwise XOR |
+| `│` | bitwise OR |
+| `in`, `not in`, `is`, `is not`, `<`, `<=`, `>`, `>=`, `!=`, `==` | comparisons (incl. membership and identity tests) |
+| `not x` | Boolean NOT |
+| `and` | Boolean AND |
+| `or` | Boolean OR |
+| `if` – `else` | conditional expr. |
+| `lambda` | lambda expr. |
+| `:=` | assignment expr. |

@@ -4,3 +4,10 @@ name = input("What is your name? ")
 print(f'Hello, {name}!')
 
 # In the first line, we initialize a variable name which references the string value read from the terminal using the input() function with a specific prompt. The return value is a string. In the next line we do a string interpolation using f-string and interpolating the variable name in the string Hello and wraping it up in a print function invocation.
+
+# 2. Modify the greeter.py program to ask for the user's first and last names separately, then greet the user with their full name.
+print()
+print("---------------- updated greeter.py --------------------------")
+first_name = input("What is your first name? ")
+last_name = input("What is your last name? ")
+print(f'Hello, {first_name} {last_name}!')

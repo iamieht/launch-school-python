@@ -2,7 +2,7 @@
 
 - Blocks of code that run as a separate unit.
 - Benefits:
-    - Reduce repetite code
+    - Reduce repetitive code
     - Easy code reuse
     - improve code readability and maintainability.
 - Methods are limited to specific objects
@@ -203,7 +203,7 @@ print(greeting)
 ## Return Values
 
 - Functions return a result to the caller for later use with return values and the `return` statement.
-- All Python function calls evakluate to a value (if the function doesn't raise an exception). By default the value is `None`, this is the **implicit return value**.
+- All Python function calls evaluate to a value (if the function doesn't raise an exception). By default the value is `None`, this is the **implicit return value**.
 - When a `return` statement is used to return a specific value from a function, this is called an **explicit return value**.
 - Functions that always return a Boolean value are called **predicates**.
 

@@ -178,3 +178,24 @@ foo()
 # foo(42)
 
 # An error is raised. A default value is expected at the 3rd parameter, as the second parameter has a default value, so any subsequent parameter must have one
+
+# 14. Identify all of the identifiers on each line of the following code.
+
+
+def multiply(left, right):
+    return left * right
+
+
+def get_num(prompt):
+    return float(input(prompt))
+
+
+first_number = get_num('Enter the first number: ')
+second_number = get_num('Enter the second number: ')
+product = multiply(first_number, second_number)
+print(f'{first_number} * {second_number} = {product}')
+
+# function names:       # multiply, get_num, float, input, print
+# function parameters:  # left, right, prompt
+# function arguments:   # "Enter the first number", "Enter the second         number", first_number, second_number, product
+# variables:            # first_number, second_number, product and function names.

@@ -19,29 +19,50 @@ def extract_digits(number):
 def digits_2_places(key):
     match key:
         case 1:
-            return "Ones"
+            return "ones"
         case 2:
-            return "Tens"
+            return "tens"
         case 3:
-            return "Hundreds"
+            return "hundreds"
         case 4:
-            return "Thousands"
+            return "thousands"
         case 5:
-            return "Ten Thousand"
+            return "ten thousand"
         case 6:
-            return "Hundred Thousands"
+            return "hundred thousands"
         case 7:
-            return "Millions"
+            return "millions"
         case 8:
-            return "Ten Millions"
+            return "ten millions"
         case 9:
-            return "Hundred Millions"
+            return "hundred millions"
         case 10:
-            return "Billions"
+            return "billions"
 
 
-number = get_number("Enter a number: ")
-num_digits = extract_digits(number)
+def get_place_values(key):
+    PLACE_VALUES = {
+        1:  'ones',
+        2:  'tens',
+        3:  'hundreds',
+        4:  'thousands',
+        5:  'ten thousand',
+        6:  'hundred thousands',
+        7:  'millions',
+        8:  'ten millions',
+        9:  'hundred millions',
+        10: 'billions',
+    }
+    return PLACE_VALUES.get(key, None)
 
-for place, value in num_digits.items():
-    print(f'{digits_2_places(place)} place is: {value}')
+
+def main():
+    number = get_number("Enter a positive integer: ")
+    num_digits = extract_digits(number)
+
+    for key, value in num_digits.items():
+        # print(f'The {digits_2_places(place)} place is: {value}')
+        print(f'The {get_place_values(key)} place is: {value}')
+
+
+main()

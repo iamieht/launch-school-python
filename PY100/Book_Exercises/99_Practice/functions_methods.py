@@ -35,3 +35,22 @@ number1 = float(input("Enter the first number: "))
 number2 = float(input("Enter the second number: "))
 
 print(f'{number1} * {number2} = {multiply(number1, number2)}')
+
+# 4.Identify items in the code
+
+
+def multiply_numbers(num1, num2, num3):
+    result = num1 * num2 * num3
+    return result
+
+
+product = multiply_numbers(2, 3, 4)
+
+# function name:            # multiply_numbers
+# function arguments:       # 2,3,4
+# function definition:      # from line 40 to 42
+# function body:            # line 41 - 42
+# function parameters:      # num1, num2, num3
+# function invocation:      # line 44
+# function return value:    # result
+# all identifiers:          # multiply_numbers, num1, num2, num3, result, product

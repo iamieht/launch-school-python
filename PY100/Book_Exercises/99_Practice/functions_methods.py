@@ -54,3 +54,14 @@ product = multiply_numbers(2, 3, 4)
 # function invocation:      # line 44
 # function return value:    # result
 # all identifiers:          # multiply_numbers, num1, num2, num3, result, product
+
+# 5. What does the following code print?
+
+
+def scream(words):
+    return words + '!!!!'
+
+
+scream('Yipeee')
+
+# Nothin is printed. The following value: Yipeee!!!! is returned, but is not captured anywhere.

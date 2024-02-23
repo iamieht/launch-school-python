@@ -238,3 +238,19 @@ print(f'{first_number} * {second_number} = {product}')
 
 # function names:       # multiply, get_num, float, input, print
 # parameters:           # left, right, prompt
+
+# 17. Which of the identifiers in the following program are function names? Which are method names? Which are built-in functions?
+
+
+def say(message):
+    print(f'==> {message}')
+
+
+string1 = input()
+string2 = input()
+
+say(max(string1.upper(), string2.lower()))
+
+# function names:       # say
+# method names:         # upper(), lower()
+# built-in:             # print, input, max

@@ -78,3 +78,15 @@ def scream(words):
 scream('Yipeee')
 
 # Nothing is printed. There is a return statement without any variable or value before the print statement at the end of the function. The return value is not captured anywhere, so nothing is done with it.
+
+# 7. Without running the following code, what do you think it will do?
+
+
+def foo(bar, qux):
+    print(bar)
+    print(qux)
+
+
+foo('Hello')
+
+# An error will be raised, as the function foo is invoked with only one argument and two are expected.

@@ -168,3 +168,13 @@ def foo(first, second=3, third=2):
 foo()
 
 # An error will be raised as the function foo expects at least one argument to be passed to the function, as the first parameter has no default value.
+
+# 13. Without running the following code, what do you think it will do?
+# def foo(first, second=3, third):
+#     print(first)
+#     print(second)
+#     print(third)
+
+# foo(42)
+
+# An error is raised. A default value is expected at the 3rd parameter, as the second parameter has a default value, so any subsequent parameter must have one

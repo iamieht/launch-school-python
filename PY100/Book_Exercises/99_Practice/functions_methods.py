@@ -90,3 +90,15 @@ def foo(bar, qux):
 foo('Hello')
 
 # An error will be raised, as the function foo is invoked with only one argument and two are expected.
+
+# 8. Without running the following code, what do you think it will do?
+
+
+def foo(bar, qux):
+    print(bar)
+    print(qux)
+
+
+foo(42, 3.141592, 2.718)
+
+# Error is raised, as duing the foo invocation we are passing 3 arguments, when 2 are expected.

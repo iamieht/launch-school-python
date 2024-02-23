@@ -199,3 +199,23 @@ print(f'{first_number} * {second_number} = {product}')
 # function parameters:  # left, right, prompt
 # function arguments:   # "Enter the first number", "Enter the second         number", first_number, second_number, product
 # variables:            # first_number, second_number, product and function names.
+
+# 15. Using the code below, classify the identifiers as global, local, or built-in
+
+
+def multiply(left, right):
+    return left * right
+
+
+def get_num(prompt):
+    return float(input(prompt))
+
+
+first_number = get_num('Enter the first number: ')
+second_number = get_num('Enter the second number: ')
+product = multiply(first_number, second_number)
+print(f'{first_number} * {second_number} = {product}')
+
+# Global:       # multiply, get_num, first_number, second_number, product
+# Local:        # left, right, prompt
+# Built-in      # float, input, print

@@ -65,3 +65,16 @@ def scream(words):
 scream('Yipeee')
 
 # Nothin is printed. The following value: Yipeee!!!! is returned, but is not captured anywhere.
+
+# 6. What does the following code print?
+
+
+def scream(words):
+    words = words + '!!!!'
+    return
+    print(words)
+
+
+scream('Yipeee')
+
+# Nothing is printed. There is a return statement without any variable or value before the print statement at the end of the function. The return value is not captured anywhere, so nothing is done with it.

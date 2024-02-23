@@ -118,3 +118,22 @@ foo(42, 3.141592, 2.718)
 # 42
 # 3.141592
 # 2.718.
+
+# 10. Without running the following code, what do you think it will do?
+
+print()
+print("-" * 60)
+
+
+def foo(first, second=3, third=2):
+    print(first)
+    print(second)
+    print(third)
+
+
+foo(42, 3.141592)
+
+# it prints:
+# 42
+# 3.141592
+# 2 => default value as no third positional argument was passed to the function

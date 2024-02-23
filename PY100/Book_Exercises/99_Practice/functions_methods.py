@@ -102,3 +102,19 @@ def foo(bar, qux):
 foo(42, 3.141592, 2.718)
 
 # Error is raised, as duing the foo invocation we are passing 3 arguments, when 2 are expected.
+
+# 9. Without running the following code, what do you think it will do?
+
+
+def foo(first, second=3, third=2):
+    print(first)
+    print(second)
+    print(third)
+
+
+foo(42, 3.141592, 2.718)
+
+# this code prints:
+# 42
+# 3.141592
+# 2.718.

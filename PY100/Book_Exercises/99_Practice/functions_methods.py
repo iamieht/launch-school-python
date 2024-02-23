@@ -9,16 +9,16 @@
 # We get a NameError: name 'foo' is not defined exception. This happens because in line 6 we pass to the print function a variable that doesn't exist in the global scope. The foo variable initialized in the function set_foo has a function scope and cannot be access outside of the function
 
 # 2. What does this program print? Why?
-print("-" * 60)
-foo = 'bar'
+# print("-" * 60)
+# foo = 'bar'
 
 
-def set_foo():
-    foo = 'qux'
+# def set_foo():
+#     foo = 'qux'
 
 
-set_foo()
-print(foo)
+# set_foo()
+# print(foo)
 
 # The program prints 'bar'. When invoking the print function and pass the foo variable, the one in scope at this level is the foo variable initialized at the top level (global scope). The local foo variable shadows the foo variable of the global scope and doesn't change its value.
 print()
@@ -27,24 +27,24 @@ print("-" * 60)
 # 3. Write a program that uses a multiply function to multiply two numbers and returns the result. Ask the user to enter the two numbers, then output the numbers and result as a simple equation.
 
 
-def multiply(number1, number2):
-    return number1 * number2
+# def multiply(number1, number2):
+#     return number1 * number2
 
 
-number1 = float(input("Enter the first number: "))
-number2 = float(input("Enter the second number: "))
+# number1 = float(input("Enter the first number: "))
+# number2 = float(input("Enter the second number: "))
 
-print(f'{number1} * {number2} = {multiply(number1, number2)}')
+# print(f'{number1} * {number2} = {multiply(number1, number2)}')
 
 # 4.Identify items in the code
 
 
-def multiply_numbers(num1, num2, num3):
-    result = num1 * num2 * num3
-    return result
+# def multiply_numbers(num1, num2, num3):
+#     result = num1 * num2 * num3
+#     return result
 
 
-product = multiply_numbers(2, 3, 4)
+# product = multiply_numbers(2, 3, 4)
 
 # function name:            # multiply_numbers
 # function arguments:       # 2,3,4
@@ -58,61 +58,61 @@ product = multiply_numbers(2, 3, 4)
 # 5. What does the following code print?
 
 
-def scream(words):
-    return words + '!!!!'
+# def scream(words):
+#     return words + '!!!!'
 
 
-scream('Yipeee')
+# scream('Yipeee')
 
 # Nothin is printed. The following value: Yipeee!!!! is returned, but is not captured anywhere.
 
 # 6. What does the following code print?
 
 
-def scream(words):
-    words = words + '!!!!'
-    return
-    print(words)
+# def scream(words):
+#     words = words + '!!!!'
+#     return
+#     print(words)
 
 
-scream('Yipeee')
+# scream('Yipeee')
 
 # Nothing is printed. There is a return statement without any variable or value before the print statement at the end of the function. The return value is not captured anywhere, so nothing is done with it.
 
 # 7. Without running the following code, what do you think it will do?
 
 
-def foo(bar, qux):
-    print(bar)
-    print(qux)
+# def foo(bar, qux):
+#     print(bar)
+#     print(qux)
 
 
-foo('Hello')
+# foo('Hello')
 
 # An error will be raised, as the function foo is invoked with only one argument and two are expected.
 
 # 8. Without running the following code, what do you think it will do?
 
 
-def foo(bar, qux):
-    print(bar)
-    print(qux)
+# def foo(bar, qux):
+#     print(bar)
+#     print(qux)
 
 
-foo(42, 3.141592, 2.718)
+# foo(42, 3.141592, 2.718)
 
 # Error is raised, as duing the foo invocation we are passing 3 arguments, when 2 are expected.
 
 # 9. Without running the following code, what do you think it will do?
 
 
-def foo(first, second=3, third=2):
-    print(first)
-    print(second)
-    print(third)
+# def foo(first, second=3, third=2):
+#     print(first)
+#     print(second)
+#     print(third)
 
 
-foo(42, 3.141592, 2.718)
+# foo(42, 3.141592, 2.718)
 
 # this code prints:
 # 42
@@ -121,17 +121,17 @@ foo(42, 3.141592, 2.718)
 
 # 10. Without running the following code, what do you think it will do?
 
-print()
-print("-" * 60)
+# print()
+# print("-" * 60)
 
 
-def foo(first, second=3, third=2):
-    print(first)
-    print(second)
-    print(third)
+# def foo(first, second=3, third=2):
+#     print(first)
+#     print(second)
+#     print(third)
 
 
-foo(42, 3.141592)
+# foo(42, 3.141592)
 
 # it prints:
 # 42
@@ -139,17 +139,17 @@ foo(42, 3.141592)
 # 2 => default value as no third positional argument was passed to the function
 
 # 11. Without running the following code, what do you think it will do?
-print()
-print("-" * 60)
+# print()
+# print("-" * 60)
 
 
-def foo(first, second=3, third=2):
-    print(first)
-    print(second)
-    print(third)
+# def foo(first, second=3, third=2):
+#     print(first)
+#     print(second)
+#     print(third)
 
 
-foo(42)
+# foo(42)
 
 # it will print:
 # 42
@@ -159,13 +159,13 @@ foo(42)
 # 12. Without running the following code, what do you think it will do?
 
 
-def foo(first, second=3, third=2):
-    print(first)
-    print(second)
-    print(third)
+# def foo(first, second=3, third=2):
+#     print(first)
+#     print(second)
+#     print(third)
 
 
-foo()
+# foo()
 
 # An error will be raised as the function foo expects at least one argument to be passed to the function, as the first parameter has no default value.
 
@@ -182,18 +182,18 @@ foo()
 # 14. Identify all of the identifiers on each line of the following code.
 
 
-def multiply(left, right):
-    return left * right
+# def multiply(left, right):
+#     return left * right
 
 
-def get_num(prompt):
-    return float(input(prompt))
+# def get_num(prompt):
+#     return float(input(prompt))
 
 
-first_number = get_num('Enter the first number: ')
-second_number = get_num('Enter the second number: ')
-product = multiply(first_number, second_number)
-print(f'{first_number} * {second_number} = {product}')
+# first_number = get_num('Enter the first number: ')
+# second_number = get_num('Enter the second number: ')
+# product = multiply(first_number, second_number)
+# print(f'{first_number} * {second_number} = {product}')
 
 # function names:       # multiply, get_num, float, input, print
 # function parameters:  # left, right, prompt
@@ -203,18 +203,18 @@ print(f'{first_number} * {second_number} = {product}')
 # 15. Using the code below, classify the identifiers as global, local, or built-in
 
 
-def multiply(left, right):
-    return left * right
+# def multiply(left, right):
+#     return left * right
 
 
-def get_num(prompt):
-    return float(input(prompt))
+# def get_num(prompt):
+#     return float(input(prompt))
 
 
-first_number = get_num('Enter the first number: ')
-second_number = get_num('Enter the second number: ')
-product = multiply(first_number, second_number)
-print(f'{first_number} * {second_number} = {product}')
+# first_number = get_num('Enter the first number: ')
+# second_number = get_num('Enter the second number: ')
+# product = multiply(first_number, second_number)
+# print(f'{first_number} * {second_number} = {product}')
 
 # Global:       # multiply, get_num, first_number, second_number, product
 # Local:        # left, right, prompt
@@ -223,18 +223,18 @@ print(f'{first_number} * {second_number} = {product}')
 # 16. In the code shown below, identify all of the function names and parameters present in the code
 
 
-def multiply(left, right):
-    return left * right
+# def multiply(left, right):
+#     return left * right
 
 
-def get_num(prompt):
-    return float(input(prompt))
+# def get_num(prompt):
+#     return float(input(prompt))
 
 
-first_number = get_num('Enter the first number: ')
-second_number = get_num('Enter the second number: ')
-product = multiply(first_number, second_number)
-print(f'{first_number} * {second_number} = {product}')
+# first_number = get_num('Enter the first number: ')
+# second_number = get_num('Enter the second number: ')
+# product = multiply(first_number, second_number)
+# print(f'{first_number} * {second_number} = {product}')
 
 # function names:       # multiply, get_num, float, input, print
 # parameters:           # left, right, prompt
@@ -242,15 +242,32 @@ print(f'{first_number} * {second_number} = {product}')
 # 17. Which of the identifiers in the following program are function names? Which are method names? Which are built-in functions?
 
 
-def say(message):
-    print(f'==> {message}')
+# def say(message):
+#     print(f'==> {message}')
 
 
-string1 = input()
-string2 = input()
+# string1 = input()
+# string2 = input()
 
-say(max(string1.upper(), string2.lower()))
+# say(max(string1.upper(), string2.lower()))
 
 # function names:       # say
 # method names:         # upper(), lower()
 # built-in:             # print, input, max
+
+# 18. Use this function to determine which of the following lists contains at least one number that is not evenly divisible by 3
+
+
+def remainders_3(numbers):
+    return [number % 3 for number in numbers]
+
+
+numbers_1 = [0, 1, 2, 3, 4, 5, 6]
+numbers_2 = [1, 2, 4, 5]
+numbers_3 = [0, 3, 6]
+numbers_4 = []
+
+print(any(remainders_3(numbers_1)))
+print(any(remainders_3(numbers_2)))
+print(any(remainders_3(numbers_3)))
+print(any(remainders_3(numbers_4)))

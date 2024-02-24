@@ -91,5 +91,5 @@ my_dict = {
     'a': 'Test2',
 }
 print(my_dict[range(5)])  # => raises a Key Error
-print(my_dict[range[2]])  # => raises a TypeError
-print(my_dict.get(range(5)))  # => returns None
+# print(my_dict[range[2]])  # => raises a TypeError
+# print(my_dict.get(range(5)))  # => returns None

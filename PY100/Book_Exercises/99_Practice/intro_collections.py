@@ -38,3 +38,21 @@ print(list(range(8, 3, -1)))     # 8, 7, 6, 5, 4
 # 8. How would you print all the numbers in the following range?
 range(3, 17, 4)
 print(list(range(3, 17, 4)))
+
+# 9. Given the code below, answer the following questions and explain your answers:
+print('-' * 60)
+my_list = [1, 2, 3, [4, 5, 6]]
+another_list = list(my_list)
+
+# 9.1 Are the lists assigned to my_list and another_list equal?
+# They are equal
+print(my_list == another_list)
+# 9.2 Are the lists assigned to my_list and another_list the same object?
+# They are not the same object
+print(my_list is another_list)
+# 9.3 Are the nested lists at index 3 of my_list and another_list equal?
+# They are equal
+print(my_list[3] == another_list[3])
+# 9.4 Are the nested lists at index 3 of my_list and another_list the same object?
+# Yes they are
+print(my_list[3] is another_list[3])

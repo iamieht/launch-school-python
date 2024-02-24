@@ -44,3 +44,16 @@ bar_code_scanner(142)   # Product not found
 #     return 'bar'
 # else:
 #     return qux()
+
+# 5. What does this code output, and why?
+
+
+def is_list_empty(my_list):
+    if my_list:
+        print('Not Empty')
+    else:
+        print('Empty')
+
+
+is_list_empty([])  # Empty
+# An empty list is a falsy value, so the else block within the function runs instead of the if block.

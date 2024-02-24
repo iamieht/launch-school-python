@@ -37,3 +37,10 @@ def bar_code_scanner(serial):
 
 bar_code_scanner('113')  # Product2
 bar_code_scanner(142)   # Product not found
+
+# 4. Refactor this statement to use a regular if statement instead.
+# return ('bar' if foo() else qux())
+# if foo():
+#     return 'bar'
+# else:
+#     return qux()

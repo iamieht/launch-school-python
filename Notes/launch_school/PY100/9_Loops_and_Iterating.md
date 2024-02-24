@@ -36,9 +36,9 @@ print(upper_names);
 
 ## for Loops
 
-- Syntax: `for` <element> `in` <iterable>
+- Syntax: `for` <element> in <iterable>
 
-```python`
+```python 
 `names = ['Chris', 'Max', 'Karis', 'Victor']`
 `upper_names = []`
  

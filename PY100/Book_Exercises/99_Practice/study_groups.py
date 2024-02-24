@@ -73,15 +73,23 @@
 
 # match/case
 
-number = 10
+# number = 10
 
 
-def greater(number):
-    match (number > 10):
-        case True:
-            return True
-        case False:
-            return False
+# def greater(number):
+#     match (number > 10):
+#         case True:
+#             return True
+#         case False:
+#             return False
 
 
-print(greater(number))
+# print(greater(number))
+
+my_dict = {
+    range(5): 'Test',
+    'a': 'Test2',
+}
+print(my_dict[range(5)])  # => raises a Key Error
+print(my_dict[range[2]])  # => raises a TypeError
+print(my_dict.get(range(5)))  # => returns None

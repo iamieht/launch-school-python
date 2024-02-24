@@ -9,3 +9,13 @@ False and (1 + 2)               # False
 False != (not True)             # False
 True == 4                       # False
 False == (847 == '847')         # True
+
+# 2. Write a function, even_or_odd, that determines whether its argument is an even or odd number. If it's even, the function should print 'even'; otherwise, it should print 'odd'. Assume the argument is always an integer.
+
+
+def even_or_odd(integer):
+    print('even' if integer % 2 == 0 else 'odd')
+
+
+even_or_odd(10)
+even_or_odd(3)

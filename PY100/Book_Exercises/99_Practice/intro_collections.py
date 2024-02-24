@@ -10,3 +10,9 @@ stuff = tuple(stuff_list)
 print(stuff)
 
 # Tuples are immutable sequences, so one possiblity is to create a list out of the tuple, change the element and create a tuple back out of the list.
+
+# 3. Identify at least 2 differences between lists and tuples. Identify at least 2 ways that lists and tuples are similar.
+# Differences:      # Tuples are immutable / Lists are mutable.
+# Tuples literal () / List literal []
+# Similarities:     # Both are sequences
+# Both are heterogeneous

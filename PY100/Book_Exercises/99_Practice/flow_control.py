@@ -57,3 +57,15 @@ def is_list_empty(my_list):
 
 is_list_empty([])  # Empty
 # An empty list is a falsy value, so the else block within the function runs instead of the if block.
+
+# 6. Write a function that takes a string as an argument and returns an all-caps version of the string when the string is longer than 10 characters. Otherwise, it should return the original string.
+
+
+def caps_longer(string):
+    return string.upper() if len(string) > 10 else string
+
+
+print(caps_longer('hello world'))
+print(caps_longer('goodbye'))
+
+# 7.

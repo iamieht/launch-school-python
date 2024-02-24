@@ -19,3 +19,6 @@ print(stuff)
 
 # 4. Why can we treat strings as sequences?
 # Because they are ordered, you can access the idividual characters with indexing.
+
+# 5. How do the set types differ from the sequence types?
+# Sets are unordered collections of unique elements. Their elements cannot be accessed via indexing.

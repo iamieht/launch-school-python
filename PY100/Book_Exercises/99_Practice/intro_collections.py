@@ -22,3 +22,8 @@ print(stuff)
 
 # 5. How do the set types differ from the sequence types?
 # Sets are unordered collections of unique elements. Their elements cannot be accessed via indexing.
+
+# 6. Write some code that converts the value of pi to a string and assigns it to a variable named str_pi.
+pi = 3.141592
+str_pi = str(pi)
+print(str_pi)

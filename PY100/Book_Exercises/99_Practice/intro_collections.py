@@ -62,3 +62,16 @@ names = {'Chris', 'Clare', 'Karis', 'Karl',
          'Max', 'Nick', 'Victor'}
 print(names)
 # A set is an unordered collection, so no guaranteed that the order when printed is the same.
+
+# 11. Country / Name
+country = {
+    'Alice':        'USA',
+    'Francois':     'Canada',
+    'Inti':         'Peru',
+    'Monika':       'Germany',
+    'Sanyu':        'Uganda',
+    'Yoshitaka':    'Japan',
+}
+
+print(country['Alice'])
+print(country['Yoshitaka'])

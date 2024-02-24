@@ -16,3 +16,6 @@ print(stuff)
 # Tuples literal () / List literal []
 # Similarities:     # Both are sequences
 # Both are heterogeneous
+
+# 4. Why can we treat strings as sequences?
+# Because they are ordered, you can access the idividual characters with indexing.

@@ -34,3 +34,7 @@ print(list(range(7)))            # 0, 1, 2, 3, 4, 5, 6
 print(list(range(3, 15, 4)))     # 3, 7, 11
 print(list(range(3, 8, -1)))     # []
 print(list(range(8, 3, -1)))     # 8, 7, 6, 5, 4
+
+# 8. How would you print all the numbers in the following range?
+range(3, 17, 4)
+print(list(range(3, 17, 4)))

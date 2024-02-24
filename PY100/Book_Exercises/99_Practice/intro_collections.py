@@ -56,3 +56,9 @@ print(my_list[3] == another_list[3])
 # 9.4 Are the nested lists at index 3 of my_list and another_list the same object?
 # Yes they are
 print(my_list[3] is another_list[3])
+
+# 10. Bob expects the following code to print the names in alphabetical order. Without running the code, can you say whether it will? Explain your answer.
+names = {'Chris', 'Clare', 'Karis', 'Karl',
+         'Max', 'Nick', 'Victor'}
+print(names)
+# A set is an unordered collection, so no guaranteed that the order when printed is the same.

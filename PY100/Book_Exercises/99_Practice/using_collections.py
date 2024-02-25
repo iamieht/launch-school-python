@@ -48,3 +48,15 @@ print(pets.get('Lizard'))
 
 # 4.3 Write some code to print <silence> when you try to print the value associated with the non-existent key, Lizard.
 print(pets.get('Lizard', '<silence>'))
+
+# 5. Which of the following values can't be used as a key in a dict object, and why?
+
+'cat'
+(3, 1, 4, 1, 5, 9, 2)
+['a', 'b']          # cannot because is not hashable as lists are mutable
+{'a': 1, 'b': 2}    # dict are mutables as well so cannot be used
+range(5)
+{1, 4, 9, 16, 25}   # sets cannot be used as they are mutable
+3
+0.0
+frozenset({1, 4, 9, 16, 25})

@@ -12,9 +12,9 @@ print(my_str[start: start + 6])
 # 3. Write Python code to create a new tuple from (1, 2, 3, 4, 5). The new tuple should be in reverse order from the original. It should also exclude the first and last members of the original. The result should be the tuple (4, 3, 2).
 # Solution 1
 org_tuple = (1, 2, 3, 4, 5)
-new_tuple = list(org_tuple[1:-1])
-new_tuple.reverse()
-new_tuple = tuple(new_tuple)
+new_list = list(org_tuple[1:-1])
+new_list.reverse()
+new_tuple = tuple(new_list)
 print(new_tuple)
 
 # Solution 2

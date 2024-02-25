@@ -161,3 +161,13 @@ print(3 in numbers2)    # False
 print(3 in numbers3)    # False
 print(3 in numbers4)    # False
 print(3 in numbers5)    # True
+
+# 13. Without running the following code, determine what each print statement should print.
+print('-' * 60)
+cats = ('Cocoa', 'Cheddar',
+        'Pudding', 'Butterscotch')
+
+print('Butterscotch' in cats)   # True
+print('Butter' in cats)         # False
+print('Butter' in cats[3])      # True
+print('cheddar' in cats)        # False

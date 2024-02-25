@@ -31,3 +31,20 @@ print(result)       # (4, 3, 2)
 my_tuple = (1, 2, 3, 4, 5)
 result = my_tuple[-2:0:-1]
 print(result)
+
+# 4. Dictionaries
+pets = {
+    'Cat':  'Meow',
+    'Dog':  'Bark',
+    'Bird': 'Tweet',
+}
+
+# 4.1 Write some code to print Bark by accessing the element associated with the key Dog.
+print(pets['Dog'])
+print(pets.get('Dog'))
+
+# 4.2 Write some code to print None when you try to print the value associated with the non-existent key, Lizard.
+print(pets.get('Lizard'))
+
+# 4.3 Write some code to print <silence> when you try to print the value associated with the non-existent key, Lizard.
+print(pets.get('Lizard', '<silence>'))

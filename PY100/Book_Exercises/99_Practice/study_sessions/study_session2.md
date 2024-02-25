@@ -19,5 +19,15 @@ result = my_tuple[-2:0:-1]
 print(result)
 ```
 
+### Without running the code(s) what is printed? why?
+```python
+my_str = 'abc'
+my_list = ['Alpha', 'Bravo', 'Charlie']
+my_tuple = (None, True, False)
+my_range = range(10, 60, 10)
 
+result = zip(my_str, my_list, my_tuple, my_range)
+print(list(result)) 
+print(list(result))
+```
 

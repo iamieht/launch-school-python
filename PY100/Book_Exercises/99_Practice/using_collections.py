@@ -147,3 +147,17 @@ print(4 in {6, 5, 4, 3, 2, 1})              # True
 # False (in with sets only checks whether a specific value is in the set.)
 print({1, 2, 3} in {1, 2, 3})
 print({3, 2} in {1, frozenset({2, 3})})     # True
+
+# 12. Write some code that determines and prints whether the number 3 appears inside each of these lists:
+print('-' * 60)
+numbers1 = [1, 3, 5, 7, 9, 11]
+numbers2 = []
+numbers3 = [2, 4, 6, 8]
+numbers4 = ['1', '3', '5']
+numbers5 = ['1', 3.0, '5']
+
+print(3 in numbers1)    # True
+print(3 in numbers2)    # False
+print(3 in numbers3)    # False
+print(3 in numbers4)    # False
+print(3 in numbers5)    # True

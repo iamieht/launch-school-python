@@ -97,3 +97,13 @@ print(text.rfind('f', 21, 35))    # 29
 # Line 94: first extracts a slice from text ranging from index 21 through index 35. That returns the string 'for the fjords'.
 
 # Line 95: does a search for the rightmost f between indexes 21 and 35. Since the f occurs at index 29, that's what the method returns.
+
+# 9. Write some code to replace the value 6 in the following nested list with 606:
+stuff = [
+    ['hello', 'world'],
+    ['example', 'mem', None, 6, 88],
+    [4, 8, 12],
+]
+
+stuff[1][-2] = 606
+print(stuff)

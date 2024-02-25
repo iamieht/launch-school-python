@@ -75,3 +75,15 @@ print('-31415'.isdigit())           # False
 print('31_415'.isdigit())           # False
 print('3.1415'.isdigit())           # False
 print(''.isspace())                 # False
+
+# 7. Write Python code to replace all the : characters in the string below with +.
+# Solution 1
+info = 'xyz:*:42:42:Lee Kim:/home/xyz:/bin/zsh'
+info_split = info.split(':')
+info = '+'.join(info_split)
+print(info)
+
+# Solution 2
+info = 'xyz:*:42:42:Lee Kim:/home/xyz:/bin/zsh'
+result = info.replace(':', '+')
+print(result)

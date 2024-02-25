@@ -33,34 +33,34 @@ print(list(result))
 
 ## Problem Set
 '''
-Assume s is a string of lower case characters.
+Assume s is a string of lower case characters and target a matching string
 
-Write a program that prints the number of times the string 'bob' occurs in s. For example, if s = 'azcbobobegghakl', then your program should print
+Write a program that prints the number of times the string target occurs in s. For example, if s = 'azcbobobegghakl' and target='bob', then your program should print
 
 Number of times bob occurs is: 2
 '''
 
 ## Algo
-- Define a function count_bob with a single parameter of type string
+- Define a function count_target with two parameters of type string
 - Assign a variable count with the integer value 0
 - Iterate over the string sequence
     - We need to work with indexes so iterate over the length of the string using i.e range constructor function
-    - Within each iteration, compare the sub-string starting from curent index up to index + 3 with the string value 'bob'
+    - Within each iteration, compare the sub-string starting from curent index up to index + 3 with the string value target
     - If there is a match, increment by 1 the value of the variable count.
-- Print 'Number of times bob occurs is: ' + the value of count
+- Print 'Number of times {target} occurs is: ' + the value of count
 
 ## Code
 ```python
-def count_bob(string):
+def count_target(s, target):
     count = 0
-    for idx in range(len(string)):
-        if string[idx:idx+3] == 'bob':
+    for idx in range(len(s)):
+        if s[idx:idx+3] == target:
             count += 1
     
-    print(f'Number of times bob occurs is: {count}')
+    print(f'Number of times {target} occurs is: {count}')
 ```
 ### Test Cases
-count_bob('azcbobobegghakl')
-count_bob('kefbooblbboboboboobobobobobobb')
-count_bob('qoboobvoboobbvhv')
+count_target('azcbobobegghakl', 'bob')
+count_target('kefbooblbboboboboobobobobobobb', 'bob')
+count_target('qoboobvoboobbvhv', 'bob')
 

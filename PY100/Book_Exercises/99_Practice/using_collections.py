@@ -87,3 +87,13 @@ print(info)
 info = 'xyz:*:42:42:Lee Kim:/home/xyz:/bin/zsh'
 result = info.replace(':', '+')
 print(result)
+
+# 8. Explain why the code below prints different values on lines 94 and 95.
+text = "It's probably pining for the fjords!"
+
+print(text[21:35].rfind('f'))     # 8
+print(text.rfind('f', 21, 35))    # 29
+
+# Line 94: first extracts a slice from text ranging from index 21 through index 35. That returns the string 'for the fjords'.
+
+# Line 95: does a search for the rightmost f between indexes 21 and 35. Since the f occurs at index 29, that's what the method returns.

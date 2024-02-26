@@ -125,10 +125,29 @@ print(factorial(25))  # 15511210043330985984000000
 # while number != highest:
 #     number = random.randrange(highest + 1)
 #     print(number)
-
+print('-' * 60)
 highest = 10
 while True:
     number = random.randrange(highest + 1)
     print(number)
     if number == highest:
         break
+
+# 11. Print all of the even numbers in the following list of nested lists. This time, don't use any for loops:
+print('-' * 60)
+my_list = [
+    [1, 3, 6, 11],
+    [4, 2, 4],
+    [9, 17, 16, 0],
+]
+
+index = 0
+while index < len(my_list):
+    subindex = 0
+    nested_lst = my_list[index]
+    while subindex < len(nested_lst):
+        if nested_lst[subindex] % 2 == 0:
+            print(nested_lst[subindex])
+
+        subindex += 1
+    index += 1

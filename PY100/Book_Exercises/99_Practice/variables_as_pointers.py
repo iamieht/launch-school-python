@@ -1,11 +1,13 @@
 # 1. In your own words, explain the difference between these two expressions.
-my_object1 == my_object2
-my_object1 is my_object2
+# import copy
+# my_object1 == my_object2
+# my_object1 is my_object2
 
 # The first expression compares whether the two objects have the same value
 # The second expression compares whether both objects reference the same object.
 
 # 2. Without running this code, what will it print? Why?
+import copy
 set1 = {42, 'Monty Python', ('a', 'b', 'c')}
 set2 = set1
 set1.add(range(5, 10))
@@ -37,3 +39,20 @@ dict1['a'][1] = 42
 print(dict2['a'])  # => [1, 42, 3]
 
 # dict2 is a shallow copy of dict1, so the nested elements are referenced to the same nested elements of the original dictionary. Any mutation of these nested elements will be visible by both objects.
+
+# 5. Write some code to create a deep copy of the dict1 object and assign it to dict2.
+dict1 = {
+    'a': [[7, 1], ['aa', 'aaa']],
+    'b': ([3, 2], ['bb', 'bbb']),
+}
+
+dict2 = copy.deepcopy(dict1)
+
+# All of these should print False
+print(dict1 is dict2)
+print(dict1['a'] is dict2['a'])
+print(dict1['a'][0] is dict2['a'][0])
+print(dict1['a'][1] is dict2['a'][1])
+print(dict1['b'] is dict2['b'])
+print(dict1['b'][0] is dict2['b'][0])
+print(dict1['b'][1] is dict2['b'][1])

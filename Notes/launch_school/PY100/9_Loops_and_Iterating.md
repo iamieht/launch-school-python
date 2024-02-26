@@ -58,3 +58,61 @@ for forename, surname in zipped_names:
 
 ## Comprehensions
 
+- Are ways of creating mutable collections from existing iterable collections.
+- There are 3 types: **list, dict and set**.
+- Comprehensions are expressions and not statements.
+- You can use a comprehension on the right side of an assignment, as a function argument, as a return value, or any other place where you can use an expression that evaluates as a list, dict, or set. You can even use them as standalone expressions
+
+### List Comprehensions
+
+- They take an iterable collection and create a new list through iteration and optional selection.
+- Syntax: `[ expression for element in iterable if condition]`
+- The `if condition` portion is optional: it tells Python to select only certain elements from the `iterable`.
+- The `for element in iterable` portion describes the iteration: it looks exactly like a `for` loop.
+- The `expression` is a value that gets returned by each iteration of the loop.
+- The `expression` in a comprehension often performs a **transformation**. It determines a new value based on an element from the original collection. Such comprehensions are called **transformations**.
+- If the `if condition` portion is present, we say that the comprehension also performs **selection**.
+- Multiple selection criteria act like nested `if` statements or as `and`-ed conditions. The selections combine, so only collection members matching all criteria are selected.
+
+**transformative** list comprehension:
+
+```python
+squares = [ number * number for number in range(5) ]
+print(squares)      # [0, 1, 4, 9, 16]
+```
+
+**selection** example:
+
+```python
+multiples_of_6 = [ number for number in range(20)
+                   if number % 6 == 0 ]
+print(multiples_of_6)      # [0, 6, 12, 18]
+```
+
+**selection** and **transformation**: 
+
+```python
+even_squares = [ number * number
+                 for number in range(10)
+                 if number % 2 == 0 ]
+print(even_squares)      # [0, 4, 16, 36, 64]
+```
+
+**multiple selection**
+
+```python
+cats_colors = {
+    'Tess':   'brown',
+    'Leo':    'orange',
+    'Fluffy': 'gray',
+    'Ben':    'black',
+    'Kat':    'orange',
+}
+
+names = [ name.upper()
+          for name in cats_colors
+          if cats_colors[name] == 'orange'
+          if name[0] == 'L' ]
+print(names) # ['LEO']
+```
+

@@ -7,6 +7,7 @@
 # The code doesn't modify the value of counter, so the expression counter < 5 is always truthy, causing an infinite loop
 
 # 2. Age.py
+import random
 age = int(input('How old are you? '))
 print()
 print(f'You are {age} years old.')
@@ -114,3 +115,20 @@ print(factorial(6))   # 720
 print(factorial(7))   # 5040
 print(factorial(8))   # 40320
 print(factorial(25))  # 15511210043330985984000000
+
+# 10. The following code uses the randrange function from Python's math library to obtain and print a random integer within a given range. Using a while loop, it keeps running until it finds a random number that matches the last number in the range. Refactor the code so it doesn't require two different invocations of randrange:
+
+# highest = 10
+# number = random.randrange(highest + 1)
+# print(number)
+
+# while number != highest:
+#     number = random.randrange(highest + 1)
+#     print(number)
+
+highest = 10
+while True:
+    number = random.randrange(highest + 1)
+    print(number)
+    if number == highest:
+        break

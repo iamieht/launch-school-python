@@ -41,3 +41,16 @@ print()
 for element in my_list:
     if element % 2 != 0:
         print(element)
+
+# 5. Print all of the even numbers in the following list of nested lists. Don't use any while loops.
+print('-' * 60)
+my_list = [
+    [1, 3, 6, 11],
+    [4, 2, 4],
+    [9, 17, 16, 0],
+]
+
+for lst in my_list:
+    for element in lst:
+        if element % 2 == 0:
+            print(element)

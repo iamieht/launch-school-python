@@ -25,3 +25,15 @@ dict2['Monty Python'] = 'Holy Grail'
 print(dict1['Monty Python'])  # => The Life of Brian
 
 # dict2 is a new object (a shallow copy of dict1) in memory, so a modification of dict2 doesn't affect the referenced object of dict1
+
+# 4. Without running this code, what will it print? Why?
+dict1 = {
+    'a': [1, 2, 3],
+    'b': (4, 5, 6),
+}
+
+dict2 = dict(dict1)
+dict1['a'][1] = 42
+print(dict2['a'])  # => [1, 42, 3]
+
+# dict2 is a shallow copy of dict1, so the nested elements are referenced to the same nested elements of the original dictionary. Any mutation of these nested elements will be visible by both objects.

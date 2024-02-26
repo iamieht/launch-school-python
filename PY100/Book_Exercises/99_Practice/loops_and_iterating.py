@@ -65,3 +65,16 @@ my_list = [
 
 new_list = ['even' if element % 2 == 0 else 'odd' for element in my_list]
 print(new_list)
+
+# 7. Write a find_integers function that returns a list of all the integers from my_tuple:
+print('-' * 60)
+
+
+def find_integers(iterable):
+    return [element for element in iterable if type(element) is int]
+
+
+my_tuple = (1, 'a', '1', 3, [7], 3.1415,
+            -4, None, {1, 2, 3}, False)
+integers = find_integers(my_tuple)
+print(integers)                    # [1, 3, -4]

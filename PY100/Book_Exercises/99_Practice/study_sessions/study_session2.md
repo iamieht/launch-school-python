@@ -64,3 +64,55 @@ count_target('azcbobobegghakl', 'bob')
 count_target('kefbooblbboboboboobobobobobobb', 'bob')
 count_target('qoboobvoboobbvhv', 'bob')
 
+#### Lisa is trying to create the following list structure: `[['x'], [], [], [], []]`. Her program outputs `[['x']]`, but she doesn't know why or how to fix it. Explain to Lisa why her program outputs `[['x']]` and propose a fix.
+
+
+my_list = 5 * [[]]
+
+for nested_arr in my_list:
+    print(id(nested_arr))
+
+my_list[0].append('x')
+# my_list.reverse()
+print(my_list) # [['x']]
+
+
+# What do the following output?
+"".split()     # []
+"".split("")   # []
+"".split(" ")  # []
+"".split("abc")# []
+
+# What would you have to do to the string "012345678" in order to end up with a tuple that contains the odd numbers in reverse order?
+string = "012345678"
+
+tup = tuple(string[7:0:-2])
+print(tup)
+
+### CORA's ALGO (Code this)
+"""
+    - define a function, `find_substring` with two parameters: `string` and `substring`:
+        - initialize variable `occurrences` to 0
+        - initialize variable `should_search` to result of logical conditions:
+            - `string` and `substring` both have a length greater than 0
+            - `substring` has a length <= the length of `string`
+
+        - if `should_search` is truthy:
+            - initialize variable `start_index` to 0
+            - initialize variable `stop_index` to (length of substring)
+            - loop while `stop_index` is >= length of `string`
+                - if `string` sliced from `start_index` to `stop_index` is == `substring`:
+                    - increment occurrences by 1
+                - increment `start_index` by 1
+                - increment `stop_index` by 1
+
+        - print `'Number of times <substring> occurs is: <occurrences>'`
+    
+    example:
+    - find_substring('azcbobobegghakl', 'bob')    # Number of times bob occurs is: 2
+    - find_substring('bob', 'bob')                # Number of times bob occurs is: 1
+    - find_substring('', '')                      # Number of times  occurs is: 0
+    - find_substring('azcbobobegghakl', 'alice')  # Number of times alice occurs is: 0
+    - find_substring('hi', 'hmmmm')               # Number of times hmmmm occurs is: 0
+"""
+

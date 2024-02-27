@@ -14,7 +14,7 @@ my_dict = {
 
 print(do_something(my_dict))
 
-# There is a bug in this function, fix it:
+# Question 2: There is a bug in this function, fix it:
 def all_actions():
     counter = 0
 
@@ -35,3 +35,7 @@ def all_actions():
     print(counter)                # 101
 
 all_actions()
+
+# Question 3: What will be printed? Why?
+print(150_000_000)
+print(15_000_0000)

@@ -29,11 +29,10 @@ print(m.sqrt(37))
 # 3. Write a nested function in sum_of_squares that will make this code work as shown.
 
 
-def square(num):
-    return num * num
-
-
 def sum_of_squares(num1, num2):
+    def square(num):
+        return num * num
+
     return square(num1) + square(num2)
 
 

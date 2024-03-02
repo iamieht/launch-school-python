@@ -29,13 +29,11 @@ def lcp(lst):
     min_length = len(lst[0])
 
     for idx in range(min_length):
-        char = lst[0][idx]
-
         for idx_elements in range(len(lst)):
-            if lst[idx_elements][idx] != char:
+            if lst[idx_elements][idx] != lst[0][idx]:
                 return longest_common_prefix
 
-        longest_common_prefix += char
+        longest_common_prefix += lst[0][idx]
 
     return longest_common_prefix
 

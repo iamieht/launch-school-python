@@ -18,7 +18,7 @@
 
 def lcp(lst):
     longest_common_prefix = ''
-    # check if lst is empty or has one element
+
     if len(lst) == 1:
         return lst[0]
 
@@ -47,3 +47,5 @@ str3 = ["flower", "flow", "flight"]
 print(lcp(str3))
 str4 = ["bob", "charles", "sally"]
 print(lcp(str4))
+str5 = ["bob", "charles", "sally", ""]
+print(lcp(str5))

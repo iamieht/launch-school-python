@@ -26,6 +26,13 @@
 #   - With each iteration check if the number is odd by invoking the is_odd function
 #   - If the number is odd print it
 
+# Bonus Question: Can you solve the problem by iterating over just the odd numbers?
+
+# Algorithm
+# - Define a function odd_numbers_bonus with a single parameter integer
+#   - Iterate from number 1 until the integer provided (inclusive) by using a step of 2, so the iteration only happens over the odd numbers
+#   - print the numbers
+
 # Code
 def odd_numbers(integer):
     for num in range(1, integer + 1):
@@ -37,13 +44,6 @@ def is_odd(integer):
     number = abs(integer)
     return number % 2 == 1
 
-
-# Bonus Question: Can you solve the problem by iterating over just the odd numbers?
-
-# Algorithm
-# - Define a function odd_numbers_bonus with a single parameter integer
-#   - Iterate from number 1 until the integer provided (inclusive) by using a step of 2, so the iteration only happens over the odd numbers
-#   - print the numbers
 
 def odd_numbers_bonus(integer):
     for num in range(1, 100, 2):

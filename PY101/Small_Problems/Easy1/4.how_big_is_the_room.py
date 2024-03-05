@@ -2,6 +2,8 @@
 
 # Build a program that asks the user to enter the length and width of a room, in meters, then prints the room's area in both square meters and square feet.
 
+# Further Exploration
+# Modify the program to let the user specify the measurement type (meters or feet). Compute the area accordingly and print it and its conversion in parentheses.
 
 # - Input:
 #   - lenght in meters (float)

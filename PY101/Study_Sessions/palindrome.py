@@ -48,7 +48,7 @@ def palindromes(num, s):
             result.append(num)
 
         num += 1
-g
+
     return result
 
 

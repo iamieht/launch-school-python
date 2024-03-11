@@ -24,9 +24,25 @@
 import random
 
 
+# def main():
+#     years = random.randint(20, 100)
+#     print(f"Teddy is {years} years old!")
+
+
+# main()
+
+# Further Exploration
+def get_name(prompt):
+    name = input(prompt)
+    return name
+
+
 def main():
     years = random.randint(20, 100)
-    print(f"Teddy is {years} years old!")
+    name = get_name("What's your name? ")
+    if not name:
+        name = "Teddy"
+    print(f"{name} is {years} years old!")
 
 
 main()

@@ -1,6 +1,9 @@
 # Problem (P)
 # Write a function that returns a list that contains every other element of a list that is passed in as an argument.
 
+# Further Exploration
+# Write a companion function that returns the 2nd, 4th, 6th, and so on elements of a list.
+
 # - Input:
 #   - list of n elements
 
@@ -42,6 +45,12 @@ def oddities(lst):
 def oddities2(lst):
     return lst[::2]
 
+# Further Exploration
+
+
+def eventies(lst):
+    return lst[1::2]
+
 
 print(oddities([2, 3, 4, 5, 6]) == [2, 4, 6])  # True
 print(oddities([1, 2, 3, 4]) == [1, 3])        # True
@@ -54,3 +63,9 @@ print(oddities2([1, 2, 3, 4]) == [1, 3])        # True
 print(oddities2(["abc", "def"]) == ['abc'])     # True
 print(oddities2([123]) == [123])                # True
 print(oddities2([]) == [])                      # True
+
+print(eventies([2, 3, 4, 5, 6]) == [3, 5])     # True
+print(eventies([1, 2, 3, 4]) == [2, 4])        # True
+print(eventies(["abc", "def"]) == ['def'])     # True
+print(eventies([123]) == [])                   # True
+print(eventies([]) == [])                      # True

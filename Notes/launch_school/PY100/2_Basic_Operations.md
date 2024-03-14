@@ -463,6 +463,17 @@ Key differences:
 - Expressions are often part of statements. For example, in the statement `y = x + 5`, `x + 5` is an expression.
 - Statements often represent bigger chunks of functionality like loops or conditionals; expressions deal with determining values.
 
+**Example:**
+
+```python
+my_number = 3
+```
+
+The code snippet contains both a statement and an expression:
+
+- `my_number = 3` is a statement that assigns the value `3` to the variable `my_number`.
+- The value `3` itself is an expression. (Code appearing to the right of an `=` in an assignment or reassignment is an expression.)
+
 Stand-alone expressions that are both statements and expressions:
 
 ```python

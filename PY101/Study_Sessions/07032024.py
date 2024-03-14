@@ -1,10 +1,10 @@
 # Ex1
-numbers1 = [1, 2, 3, 4]
-numbers2 = [1, 2, 3, 4]
-numbers3 = numbers2
+# numbers1 = [1, 2, 3, 4]
+# numbers2 = [1, 2, 3, 4]
+# numbers3 = numbers2
 
-print(numbers == numbers)
-print(numbers is numbers)
+# print(numbers == numbers)
+# print(numbers is numbers)
 
 # Ex2
 # Create an empty set
